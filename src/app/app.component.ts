@@ -12,5 +12,5 @@ export class AppComponent {
 
   constructor(public about: AboutService,
     public heroService: HeroService,
-    public socialService: SocialService) { }
+    public socialService: SocialService) {  }
 }

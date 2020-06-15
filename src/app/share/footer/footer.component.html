@@ -4,11 +4,11 @@
       <h3>Edier A. Villaneda</h3>
       <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
       <div class="social-l">
-        <a *ngIf="_social.social['twitter']" href="{{ _social.social['twitter'] }}" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a *ngIf="_social.social['facebook']" href="{{ _social.social['facebook'] }}" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a *ngIf="_social.social['instagram']" href="{{ _social.social['instagram'] }}" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <!-- <a *ngIf="_social.social['skype']" href="{{ _social.social['skype'] }}" class="google-plus"><i class="bx bxl-skype"></i></a> -->
-        <a *ngIf="_social.social['linkedin']" href="{{ _social.social['linkedin'] }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a *ngIf="_social.social['twitter']" href="{{ _social.social['twitter'] }}" class="twitter"><fa-icon [icon]="twitter"></fa-icon></a>
+        <a *ngIf="_social.social['facebook']" href="{{ _social.social['facebook'] }}" class="facebook"><fa-icon [icon]="facebook"></fa-icon></a>
+        <a *ngIf="_social.social['instagram']" href="{{ _social.social['instagram'] }}" class="instagram"><fa-icon [icon]="instagram"></fa-icon></a>
+        <!-- <a *ngIf="_social.social['skype']" href="{{ _social.social['skype'] }}" class="skype"><fa-icon [icon]="skype"></fa-icon></a> -->
+        <a *ngIf="_social.social['linkedin']" href="{{ _social.social['linkedin'] }}" class="linkedin"><fa-icon [icon]="linkedin"></fa-icon></a>
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
