@@ -1,0 +1,14 @@
+<!-- <section id="hero" class="d-flex flex-column justify-content-center" [ngStyle]="{'background': 'url(' + _hero.hero.heroImg + ') top right'}"> -->
+<section id="hero" class="d-flex flex-column justify-content-center">
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <h1>{{ _hero.hero['nombre'] }}</h1>
+    <p *ngIf="_about.about['titulo']"><span>{{ _about.about['titulo'] }}</span></p>
+    <div class="social-l">
+      <a *ngIf="_social.social['twitter']" href="{{ _social.social['twitter'] }}" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a *ngIf="_social.social['facebook']" href="{{ _social.social['facebook'] }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a *ngIf="_social.social['instagram']" href="{{ _social.social['instagram'] }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <!-- <a *ngIf="_social.social['skype']" href="{{ _social.social['skype'] }}" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+      <a *ngIf="_social.social['linkedin']" href="{{ _social.social['linkedin'] }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div>
+</section>

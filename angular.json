@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ediervillaneda",
+            "outputPath": "dist/ediervillaneda  ",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ediervillaneda"
+    }
+  },
+  "defaultProject": "ediervillaneda",
+  "cli": {
+    "analytics": "7e34396e-809e-4ca7-a4ca-c9da7d17f20c"
+  }
 }

@@ -1,0 +1,47 @@
+<!-- ======= About Section ======= -->
+<section *ngIf="aboutService.about" id="about" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>About</h2>
+      <p *ngIf="aboutService.about['descripcion3']">{{ aboutService.about['descripcion'] }}</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="{{ aboutService.about['imagen'] }}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 pt-4 pt-lg-0 content">
+        <h3>{{ aboutService.about['titulo'] }}</h3>
+        <p *ngIf="aboutService.about['descripcion2']" class="font-italic">{{ aboutService.about['descripcion2'] }}
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <!-- <li *ngFor="let item of aboutService.about | keyvalue"><i class="icofont-rounded-right"></i> <strong>{{ item.key |titlecase}}: </strong>{{ item.value }}</li> -->
+              <li *ngIf="aboutService.about['birthday']"><i class="icofont-rounded-right"></i> <strong>Birthday: </strong>{{ aboutService.about['birthday']}}</li>
+              <li *ngIf="aboutService.about['website']"><i class="icofont-rounded-right"></i> <strong>Website: </strong><a href="{{ aboutService.about['website'] }}">{{ aboutService.about['website'] }}</a></li>
+              <li *ngIf="aboutService.about['phone']"><i class="icofont-rounded-right"></i> <strong>Phone: </strong> +123 456 7890</li>
+              <li>
+                <i class="icofont-rounded-right"></i>
+                <strong>City: </strong>
+                <span *ngIf="aboutService.about['city']">{{ aboutService.about['city'] | titlecase }}</span>
+                <span *ngIf="aboutService.about['country']">, {{ aboutService.about['country'] }}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li *ngIf="aboutService.about['age']"><i class="icofont-rounded-right"></i> <strong>Age: </strong>{{ aboutService.about['age'] }}</li>
+              <li *ngIf="aboutService.about['degree']"><i class="icofont-rounded-right"></i> <strong>Degree: </strong> Master</li>
+              <li *ngIf="aboutService.about['email']"><i class="icofont-rounded-right"></i> <strong>Email: </strong> email@example.com</li>
+              <li *ngIf="aboutService.about['freelance']"><i class="icofont-rounded-right"></i> <strong>Freelance: </strong> Available</li>
+            </ul>
+          </div>
+        </div>
+        <p *ngIf="aboutService.about['descripcion3']">{{ aboutService.about['descripcion3'] }}</p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
