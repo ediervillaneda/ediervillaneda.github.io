@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ediervillaneda:build"
+            "browserTarget": "ediervillaneda.github.io:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ediervillaneda:build:production"
+              "browserTarget": "ediervillaneda.github.io:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ediervillaneda:build"
+            "browserTarget": "ediervillaneda.github.io:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ediervillaneda:serve"
+            "devServerTarget": "ediervillaneda.github.io:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ediervillaneda:serve:production"
+              "devServerTarget": "ediervillaneda.github.io:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ediervillaneda",
+  "defaultProject": "ediervillaneda.github.io",
   "cli": {
     "analytics": "7e34396e-809e-4ca7-a4ca-c9da7d17f20c"
   },
