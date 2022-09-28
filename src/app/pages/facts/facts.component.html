@@ -9,35 +9,11 @@
 
     <div class="row">
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-6 col-sm-3 " *ngFor="let item of _facts['facts']['fact']">
         <div class="count-box">
-          <em class="icofont-simple-smile"></em>
-          <span data-toggle="counter-up">232</span>
-          <p>Happy Clients</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-        <div class="count-box">
-          <em class="icofont-document-folder"></em>
-          <span data-toggle="counter-up">521</span>
-          <p>Projects</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-        <div class="count-box">
-          <em class="icofont-live-support"></em>
-          <span data-toggle="counter-up">1,463</span>
-          <p>Hours Of Support</p>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-        <div class="count-box">
-          <em class="icofont-users-alt-5"></em>
-          <span data-toggle="counter-up">15</span>
-          <p>Hard Workers</p>
+          <fa-icon [icon]="item['icono']"></fa-icon>
+          <span data-toggle="counter-up">{{ item['cantidad'] }}</span>
+          <p>{{ item['descripcion'] }}</p>
         </div>
       </div>
 

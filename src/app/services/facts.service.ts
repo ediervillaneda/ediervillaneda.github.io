@@ -19,8 +19,6 @@ export class FactsService {
       this.http
         .get<Facts[]>('https://ediervillaneda-a5ab2.firebaseio.com/about/facts.json')
         .subscribe((resp: Facts[]) => {
-          console.log(resp);
-
           this.facts = resp;
           this.cargando = false;
           resolve();
