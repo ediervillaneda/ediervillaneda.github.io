@@ -3,7 +3,7 @@ import { Skills } from './skills.interfase';
 
 export interface About {
   age?: string;
-  birthday?: string;
+  birthday?: Date;
   city?: string;
   country?: string;
   descripcion?: string[];

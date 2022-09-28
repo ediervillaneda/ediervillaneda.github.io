@@ -26,9 +26,9 @@
       location.hostname == this.hostname
     ) {
       e.preventDefault();
-      var target = $(this.hash);
+      let target = $(this.hash);
       if (target.length) {
-        var scrollto = target.offset().top;
+        let scrollto = target.offset().top;
 
         $("html, body").animate(
           {
@@ -62,7 +62,7 @@
   });
 
   $(document).click(function (e) {
-    var container = $(".mobile-nav-toggle");
+    let container = $(".mobile-nav-toggle");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       if ($("body").hasClass("mobile-nav-active")) {
         $("body").removeClass("mobile-nav-active");
@@ -74,14 +74,14 @@
   });
 
   // Navigation active state on scroll
-  var nav_sections = $("section");
-  var main_nav = $(".nav-menu, #mobile-nav");
+  let nav_sections = $("section");
+  let main_nav = $(".nav-menu, #mobile-nav");
 
   $(window).on("scroll", function () {
-    var cur_pos = $(this).scrollTop() + 300;
+    let cur_pos = $(this).scrollTop() + 300;
 
     nav_sections.each(function () {
-      var top = $(this).offset().top,
+      let top = $(this).offset().top,
         bottom = top + $(this).outerHeight();
 
       if (cur_pos >= top && cur_pos <= bottom) {
@@ -147,7 +147,7 @@
 
   // Porfolio isotope and filter
   $(window).on("load", function () {
-    var portfolioIsotope = $(".portfolio-container").isotope({
+    let portfolioIsotope = $(".portfolio-container").isotope({
       itemSelector: ".portfolio-item",
     });
 
