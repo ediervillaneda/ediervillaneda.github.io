@@ -1,0 +1,20 @@
+<section id="hero" class="d-flex flex-column justify-content-center">
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <h1>{{ _hero.hero['nombre'] }}</h1>
+    <p *ngIf="_about.about['titulo']"><span>{{ _about.about['titulo'] }}</span></p>
+    <div class="social-l">
+      <a *ngIf="_hero.hero['social']['twitter']" href="{{ _hero.hero['social']['twitter'] }}" class="twitter">
+        <fa-icon [icon]="twitter"></fa-icon>
+      </a>
+      <a *ngIf="_hero.hero['social']['facebook']" href="{{ _hero.hero['social']['facebook'] }}" class="facebook">
+        <fa-icon [icon]="facebook"></fa-icon>
+      </a>
+      <a *ngIf="_hero.hero['social']['instagram']" href="{{ _hero.hero['social']['instagram'] }}" class="instagram">
+        <fa-icon [icon]="instagram"></fa-icon>
+      </a>
+      <a *ngIf="_hero.hero['social']['linkedin']" href="{{ _hero.hero['social']['linkedin'] }}" class="linkedin">
+        <fa-icon [icon]="linkedin"></fa-icon>
+      </a>
+    </div>
+  </div>
+</section>
