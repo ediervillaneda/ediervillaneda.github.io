@@ -1,6 +1,6 @@
 {
   "name": "ediervillaneda.github.io",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "scripts": {
     "build": "ng build",
     "deploy": "ng build --base-href=/ediervillaneda.github.io",
