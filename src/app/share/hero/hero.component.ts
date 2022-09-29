@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroService } from '../../services/hero.service';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { AboutService } from '../../services/about.service';
-import { faFacebook, faTwitter, faInstagram, faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
-
-library.add(faTwitter, faLinkedin);
+import { HeroService } from '../../services/hero.service';
+import { SocialService } from 'src/app/services/social.service';
 
 @Component({
   selector: 'app-hero',
@@ -12,21 +11,21 @@ library.add(faTwitter, faLinkedin);
   styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent implements OnInit {
-
-  facebook = faFacebook;
-  twitter = faTwitter;
-  instagram = faInstagram;
-  skype = faSkype;
-  linkedin = faLinkedin;
-
-  dataItems!: string;
-
   constructor(
     public _hero: HeroService,
-    public _about: AboutService
-  ) {}
+    public _social: SocialService,
+    public _about: AboutService,
+    public library: FaIconLibrary
+  ) {
+    library.addIconPacks(fab);
+  }
 
   ngOnInit(): void {
+    this._social['social'].forEach(function (element: any) {
+      console.log(element);
+    });
+    console.log(this._social);
+
     /* TODO document why this method 'ngOnInit' is empty */
   }
 }

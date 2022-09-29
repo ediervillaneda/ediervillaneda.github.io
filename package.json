@@ -6,7 +6,7 @@
     "deploy": "ng build --base-href=/ediervillaneda.github.io",
     "ng": "ng",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "ng test --watch",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,

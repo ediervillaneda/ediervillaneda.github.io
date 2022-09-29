@@ -13,7 +13,6 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 export class FactsComponent implements OnInit {
   constructor(public _facts: FactsService, public library: FaIconLibrary) {
     library.addIconPacks(fas, far);
-    console.log(this._facts['facts']);
   }
 
   ngOnInit(): void {
