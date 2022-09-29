@@ -3,7 +3,7 @@
     <h1>{{ _hero.hero['nombre'] }}</h1>
     <p *ngIf="_about.about['titulo']"><span>{{ _about.about['titulo'] }}</span></p>
     <div class="social-l">
-      <a *ngFor="let item of _social.social['social']" ng-href="item['url']" [attr.class]="item['icon']">
+      <a *ngFor="let item of _hero.hero['social']" [attr.href]="item['url']" [attr.class]="item['icon']">
         <fa-icon [icon]="['fab', item['icon']]"></fa-icon>
       </a>
       <!-- <a *ngIf="_hero.hero['social']['twitter']" href="{{ _hero.hero['social']['twitter'] }}" class="twitter">

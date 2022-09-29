@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Resume } from 'src/app/interfaces/resume.interfase';
 import { ResumeService } from 'src/app/services/resume.service';
 
 @Component({
@@ -7,11 +7,10 @@ import { ResumeService } from 'src/app/services/resume.service';
   templateUrl: './resume.component.html',
 })
 export class ResumeComponent implements OnInit {
-  constructor(public _resume: ResumeService) {
-    /* TODO document why this constructor is empty */
-  }
+  
+  constructor(public _resume: ResumeService) {}
 
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
+
   }
 }
