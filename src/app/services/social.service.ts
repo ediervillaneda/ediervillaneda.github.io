@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Social } from '../interfaces/social.interface';
 import { HttpClient } from '@angular/common/http';
+import { GlobalCostants } from '../global.constants';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class SocialService {
   cargando = true;
   public social: Social[] = [];
-  private socialUrl = 'https://ediervillaneda-a5ab2.firebaseio.com/hero/social.json';
+  private url = `${GlobalCostants.firebaseUrl}/hero.json`;
 
   constructor(private http: HttpClient) {
     this.cargarSocial();
@@ -16,8 +17,8 @@ export class SocialService {
 
   private cargarSocial() {
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<Social[]>(this.socialUrl).subscribe((resp: Social[]) => {
-        this.social = {...resp};
+      this.http.get<Social[]>(this.url).subscribe((resp: Social[]) => {
+        this.social = resp;
         this.cargando = false;
         resolve();
       });
