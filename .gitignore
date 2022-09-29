@@ -29,14 +29,16 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
 .sass-cache/
+.scannerwork/*
+/.angular/cache
 /connect.lock
 /coverage
 /libpeerconnection.log
-testem.log
 /typings
+testem.log
 
 # System files
 .DS_Store
 Thumbs.db
+sonar-project.properties

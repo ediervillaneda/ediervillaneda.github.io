@@ -8,7 +8,6 @@ import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-facts',
   templateUrl: './facts.component.html',
-  styleUrls: ['./facts.component.css'],
 })
 export class FactsComponent implements OnInit {
   constructor(public _facts: FactsService, public library: FaIconLibrary) {
