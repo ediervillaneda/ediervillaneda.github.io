@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalCostants } from 'src/app/global.constants';
 import { AboutService } from '../../services/about.service';
 
 @Component({
@@ -7,9 +8,7 @@ import { AboutService } from '../../services/about.service';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
-  constructor(public _about: AboutService) {
-  }
+  constructor(public _about: AboutService) {}
 
-  ngOnInit(): void {
-    /* TODO document why this method 'ngOnInit' is empty */ }
+  ngOnInit(): void {}
 }
