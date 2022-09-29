@@ -1,12 +1,12 @@
 {
   "name": "ediervillaneda.github.io",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "scripts": {
     "build": "ng build",
     "deploy": "ng build --base-href=/ediervillaneda.github.io",
     "ng": "ng",
     "start": "ng serve",
-    "sonar":"sonar-scanner.bat",
+    "sonar": "sonar-scanner.bat",
     "test": "ng test --watch",
     "version": "git pull --tags && npm version patch",
     "watch": "ng build --watch --configuration development"
