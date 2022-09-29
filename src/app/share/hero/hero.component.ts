@@ -21,11 +21,6 @@ export class HeroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._social['social'].forEach(function (element: any) {
-      console.log(element);
-    });
-    console.log(this._social);
-
     /* TODO document why this method 'ngOnInit' is empty */
   }
 }
