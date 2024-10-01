@@ -2,11 +2,13 @@ import { Facts } from './facts.interfase';
 import { Skills } from './skills.interfase';
 
 export interface About {
-  age?: string;
-  birthday?: Date;
+  age?: number;
+  birthday: string;
   city?: string;
   country?: string;
   descripcion?: string[];
+  descripcion2?: string[];
+  descripcion3?: string[];
   email?: string;
   facts?: Facts;
   skills?: Skills;

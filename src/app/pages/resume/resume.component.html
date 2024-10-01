@@ -4,30 +4,30 @@
 
     <div class="section-title">
       <h2>Resume</h2>
-      <p>{{ _resume.resume['descripcion'] }}</p>
+      <p>{{ _resume.resume.descripcion }}</p>
     </div>
 
     <div class="row">
       <div class="col-lg-6">
         <h3 class="resume-title">Education</h3>
-        <span *ngFor="let item of _resume.resume['educations']">
-          <span *ngIf="item['title'] !== ''; then education"></span>
+        <span *ngFor="let item of _resume.resume.educations">
+          <span *ngIf="item.title !== ''; then education"></span>
           <ng-template #education>
             <div class="resume-item">
-              <h4>{{ item['title'] }}</h4>
-              <h5>{{ item['date'] }}</h5>
-              <p><em>{{ item['institute'] }} ({{item['site']}})</em></p>
+              <h4>{{ item.title }}</h4>
+              <h5>{{ item.date }}</h5>
+              <p><em>{{ item.institute }} ({{item.site}})</em></p>
             </div>
           </ng-template>
         </span>
 
         <h3 class="resume-title">Courses</h3>
-        <span *ngFor="let item2 of _resume.resume['educations']">
-          <span *ngIf="item2['title'] == ''">
+        <span *ngFor="let item2 of _resume.resume.educations">
+          <span *ngIf="item2.title == ''">
             <div class="resume-item">
-              <h4>{{ item2['course'] }}</h4>
-              <h5>{{ item2['date'] }}</h5>
-              <p><em>{{ item2['institute'] }} ({{ item2['site'] }})</em></p>
+              <h4>{{ item2.course }}</h4>
+              <h5>{{ item2.date }}</h5>
+              <p><em>{{ item2.institute }} ({{ item2.site }})</em></p>
             </div>
           </span>
         </span>
@@ -35,13 +35,13 @@
 
       <div class="col-lg-6">
         <h3 class="resume-title">Professional Experience</h3>
-        <span *ngFor="let item3 of _resume.resume['experiences']; let i = index">
+        <span *ngFor="let item3 of _resume.resume.experiences; let i = index">
           <div class="resume-item">
-            <h4>{{ item3['position'] }}</h4>
-            <h5>{{ item3['start_date'] }} - {{ item3['end_date'] === false ? 'Actualidad': item3['end_date'] }}</h5>
-            <p><em>{{ item3['company'] }}, {{ item3['city'] }} </em></p>
+            <h4>{{ item3.position }}</h4>
+            <h5>{{ item3.start_date }} - {{ item3.end_date === false ? 'Actualidad': item3.end_date }}</h5>
+            <p><em>{{ item3.company }}, {{ item3.city }} </em></p>
             <ul>
-              <li *ngFor="let ex of item3['description']">{{ ex }}</li>
+              <li *ngFor="let ex of item3.description">{{ ex }}</li>
             </ul>
           </div>
         </span>

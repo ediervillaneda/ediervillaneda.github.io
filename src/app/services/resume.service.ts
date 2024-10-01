@@ -8,7 +8,11 @@ import { Resume } from '../interfaces/resume.interfase';
 })
 export class ResumeService {
   cargando = true;
-  resume: Resume[] = [];
+  resume: Resume = {
+    descripcion: '',
+    educations: [],
+    experiences: [],
+  };
   private url = `${GlobalCostants.firebaseUrl}/resumen.json`;
 
   constructor(private http: HttpClient) {
@@ -16,7 +20,7 @@ export class ResumeService {
   }
   cargarResumen() {
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<Resume[]>(this.url).subscribe((resp: Resume[]) => {
+      this.http.get<Resume>(this.url).subscribe((resp: Resume) => {
         this.resume = resp;
         this.cargando = false;
         resolve();

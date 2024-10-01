@@ -1,11 +1,11 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="container">
-    <h3>{{ _hero.hero['nombre'] }}</h3>
-    <p *ngIf="_about.about['titulo']"><span>{{ _about.about['titulo'] }}</span></p>
+    <h3>{{ _hero.hero.nombre }}</h3>
+    <p *ngIf="_about.about.titulo"><span>{{ _about.about.titulo }}</span></p>
     <div class="social-l">
-      <a *ngFor="let item of _social.social['social']" [attr.href]="item['url']" [attr.class]="item['icon']">
-        <fa-icon [icon]="['fab', item['icon']]"></fa-icon>
+      <a *ngFor="let item of _social.social['social']" [attr.href]="item.url" [attr.class]="item.icon">
+        <fa-icon [icon]="['fab', item.icon]"></fa-icon>
       </a>
     </div>
     <div class="copyright">

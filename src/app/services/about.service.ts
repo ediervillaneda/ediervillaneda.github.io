@@ -8,7 +8,9 @@ import { About } from '../interfaces/about.interface';
 })
 export class AboutService {
   cargando = true;
-  about: About[] = [];
+  about: About = {
+    birthday: '',
+  };
 
   private url = `${GlobalCostants.firebaseUrl}/about.json`;
 
@@ -19,13 +21,13 @@ export class AboutService {
   private cargarAbout() {
     let date: Date;
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<About[]>(this.url).subscribe((resp: About[]) => {
+      this.http.get<About>(this.url).subscribe((resp: About) => {
         this.cargando = false;
         this.about = resp;
 
         date = new Date(resp['birthday']);
-        this.about['birthday'] = date.toISOString().slice(0, 10);
-        this.about['age'] = this.calcularEdad(date);
+        this.about.birthday = date.toISOString().slice(0, 10);
+        this.about.age = this.calcularEdad(date);
         resolve();
       });
     });

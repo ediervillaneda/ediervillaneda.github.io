@@ -4,16 +4,17 @@
 
     <div class="section-title">
       <h2>Facts</h2>
-      <p>{{ _facts.facts['descripcion'] }}</p>
+      <p>{{ _facts.facts.descripcion }}</p>
     </div>
 
     <div class="row">
 
-      <div class="col-6 col-sm-3 " *ngFor="let item of _facts['facts']['fact']">
+      <div class="col-6 col-sm-3" *ngFor="let item of _facts.facts?.fact">
         <div class="count-box">
-          <fa-icon [icon]="item['icono']"></fa-icon>
-          <span data-toggle="counter-up">{{ item['cantidad'] }}</span>
-          <p>{{ item['descripcion'] }}</p>
+          <!-- Condicional para mostrar el icono solo si existe -->
+          <fa-icon *ngIf="item.icono" [icon]="['fas', item.icono]"></fa-icon>
+          <span data-toggle="counter-up">{{ item.cantidad }}</span>
+          <p>{{ item.descripcion }}</p>
         </div>
       </div>
 

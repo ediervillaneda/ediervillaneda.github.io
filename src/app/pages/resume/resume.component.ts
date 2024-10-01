@@ -7,10 +7,7 @@ import { ResumeService } from 'src/app/services/resume.service';
   templateUrl: './resume.component.html',
 })
 export class ResumeComponent implements OnInit {
-  
   constructor(public _resume: ResumeService) {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 }
