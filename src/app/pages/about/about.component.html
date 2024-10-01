@@ -17,12 +17,19 @@
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li *ngIf="_about.about['birthday']"><em class="icofont-rounded-right"></em> <strong>Birthday: </strong>{{ _about.about['birthday']}}</li>
-              <li *ngIf="_about.about['website']"><em class="icofont-rounded-right"></em> <strong>Website: </strong><a href="{{ _about.about['website'] }}">{{ _about.about['website'] }}</a></li>
-              <li *ngIf="_about.about['phone']"><em class="icofont-rounded-right"></em> <strong>Phone: </strong> +123 456 7890</li>
+              <li *ngIf="_about.about['birthday']">
+                <em class="icofont-rounded-right"> </em> <strong>Birthday: </strong>
+                {{ _about.about['birthday'] }}
+              </li>
+              <li *ngIf="_about.about['website']">
+                <em class="icofont-rounded-right"></em> <strong>Website: </strong>
+                <a href="{{ _about.about['website'] }}">{{ _about.about['website'] }}</a>
+              </li>
+              <li *ngIf="_about.about['phone']">
+                <em class="icofont-rounded-right"></em> <strong>Phone: </strong>{{ _about.about['phone'] }}
+              </li>
               <li>
-                <em class="icofont-rounded-right"></em>
-                <strong>City: </strong>
+                <em class="icofont-rounded-right"></em> <strong>City: </strong>
                 <span *ngIf="_about.about['city']">{{ _about.about['city'] | titlecase }}</span>
                 <span *ngIf="_about.about['country']">, {{ _about.about['country'] }}</span>
               </li>
@@ -30,10 +37,18 @@
           </div>
           <div class="col-lg-6">
             <ul>
-              <li *ngIf="_about.about['age']"><em class="icofont-rounded-right"></em> <strong>Age: </strong>{{ _about.about['age'] }}</li>
-              <li *ngIf="_about.about['degree']"><em class="icofont-rounded-right"></em> <strong>Degree: </strong> Master</li>
-              <li *ngIf="_about.about['email']"><em class="icofont-rounded-right"></em> <strong>Email: </strong> email@example.com</li>
-              <li *ngIf="_about.about['freelance']"><em class="icofont-rounded-right"></em> <strong>Freelance: </strong> Available</li>
+              <li *ngIf="_about.about['age']">
+                <em class="icofont-rounded-right"></em> <strong>Age: </strong>{{ _about.about['age'] }}
+              </li>
+              <li *ngIf="_about.about['degree']">
+                <em class="icofont-rounded-right"></em> <strong>Degree: </strong>{{ _about.about['degree'] }}
+              </li>
+              <li *ngIf="_about.about['email']">
+                <em class="icofont-rounded-right"></em> <strong>Email: </strong>{{ _about.about['email'] }}
+              </li>
+              <li *ngIf="_about.about['freelance']">
+                <em class="icofont-rounded-right"></em> <strong>Freelance:</strong>{{ _about.about['freelance'] }}
+              </li>
             </ul>
           </div>
         </div>
