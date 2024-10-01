@@ -8,7 +8,7 @@
     "start": "ng serve",
     "sonar": "sonar-scanner.bat",
     "test": "ng test --watch",
-    "version": "git pull --tags && npm version patch",
+    "version": "git pull --tags && npm version minor -m 'Update to %s'",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
