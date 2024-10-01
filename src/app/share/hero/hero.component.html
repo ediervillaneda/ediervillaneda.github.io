@@ -1,21 +1,21 @@
 <section id="hero" class="d-flex flex-column justify-content-center">
   <div class="container" data-aos="zoom-in" data-aos-delay="100">
-    <h1>{{ _hero.hero['nombre'] }}</h1>
-    <p *ngIf="_about.about['titulo']"><span>{{ _about.about['titulo'] }}</span></p>
+    <h1>{{ _hero.hero.nombre }}</h1>
+    <p *ngIf="_about.about.titulo "><span>{{ _about.about.titulo }}</span></p>
     <div class="social-l">
-      <a *ngFor="let item of _hero.hero['social']" [attr.href]="item['url']" [attr.class]="item['icon']">
-        <fa-icon [icon]="['fab', item['icon']]"></fa-icon>
+      <a *ngFor="let item of _hero.hero.social" [attr.href]="item.url " [attr.class]="item.icon">
+        <fa-icon [icon]="['fab', item.icon ]"></fa-icon>
       </a>
-      <!-- <a *ngIf="_hero.hero['social']['twitter']" href="{{ _hero.hero['social']['twitter'] }}" class="twitter">
+      <!-- <a *ngIf="_hero.hero.social .twitter " href="{{ _hero.hero.social .twitter  }}" class="twitter">
         <fa-icon [icon]="twitter"></fa-icon>
       </a>
-      <a *ngIf="_hero.hero['social']['facebook']" href="{{ _hero.hero['social']['facebook'] }}" class="facebook">
+      <a *ngIf="_hero.hero.social .facebook " href="{{ _hero.hero.social .facebook  }}" class="facebook">
         <fa-icon [icon]="facebook"></fa-icon>
       </a>
-      <a *ngIf="_hero.hero['social']['instagram']" href="{{ _hero.hero['social']['instagram'] }}" class="instagram">
+      <a *ngIf="_hero.hero.social .instagram " href="{{ _hero.hero.social .instagram  }}" class="instagram">
         <fa-icon [icon]="instagram"></fa-icon>
       </a>
-      <a *ngIf="_hero.hero['social']['linkedin']" href="{{ _hero.hero['social']['linkedin'] }}" class="linkedin">
+      <a *ngIf="_hero.hero.social .linkedin " href="{{ _hero.hero.social .linkedin  }}" class="linkedin">
         <fa-icon [icon]="linkedin"></fa-icon>
       </a> -->
     </div>

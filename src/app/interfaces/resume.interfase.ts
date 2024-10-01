@@ -3,6 +3,6 @@ import { Experience } from "./experience.interfase";
 
 export interface Resume {
     descripcion?: string;
-    education?: Education[];
-    experience?: Experience;
+    educations?: Education[];
+    experiences: Experience[];
   }

@@ -1,4 +1,5 @@
 export interface Social {
-  icon?: string;
-  url?:  string;
+[x: string]: any;
+  icon: string;
+  url:  string;
 }

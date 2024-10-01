@@ -8,7 +8,10 @@ import { GlobalCostants } from '../global.constants';
 })
 export class SocialService {
   cargando = true;
-  public social: Social[] = [];
+  social: Social = {
+    icon: '',
+    url: ''
+  };
   private url = `${GlobalCostants.firebaseUrl}/hero.json`;
 
   constructor(private http: HttpClient) {
@@ -17,7 +20,7 @@ export class SocialService {
 
   private cargarSocial() {
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<Social[]>(this.url).subscribe((resp: Social[]) => {
+      this.http.get<Social>(this.url).subscribe((resp: Social) => {
         this.social = resp;
         this.cargando = false;
         resolve();

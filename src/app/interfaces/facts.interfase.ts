@@ -6,5 +6,5 @@ export interface Facts {
 export interface Fact {
   cantidad?: string;
   descripcion?: string;
-  icono?: string;
+  icono: string;
 }

@@ -9,8 +9,11 @@ import { GlobalCostants } from '../global.constants';
 })
 export class SkillsService {
   cargando = true;
-  skills: Skills[] = [];
-  private url = `${GlobalCostants.firebaseUrl}/hero.json`;
+  skills: Skills = {
+    descripcion: ''
+  };
+  private url = `${GlobalCostants.firebaseUrl}//about/skills.json`;
+  // private url = `${GlobalCostants.firebaseUrl}/hero.json`;
 
   constructor(private http: HttpClient) {
     this.cargarSkills();
@@ -18,7 +21,7 @@ export class SkillsService {
 
   private cargarSkills() {
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<Skills[]>(this.url).subscribe((resp: Skills[]) => {
+      this.http.get<Skills>(this.url).subscribe((resp: Skills) => {
         this.skills = resp;
         this.cargando = false;
         resolve();

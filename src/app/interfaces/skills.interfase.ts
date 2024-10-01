@@ -1,5 +1,5 @@
 export interface Skills {
-  descripcion?: string;
+  descripcion: string;
   skill?: Skill[];
 }
 

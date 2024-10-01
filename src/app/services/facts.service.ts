@@ -9,7 +9,7 @@ import { GlobalCostants } from '../global.constants';
 })
 export class FactsService {
   cargando = true;
-  facts: Facts[] = [];
+  facts: Facts = {};
   private url = `${GlobalCostants.firebaseUrl}/about/facts.json`;
 
   constructor(private http: HttpClient) {
@@ -18,7 +18,7 @@ export class FactsService {
 
   private cargarFacts() {
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<Facts[]>(this.url).subscribe((resp: Facts[]) => {
+      this.http.get<Facts>(this.url).subscribe((resp: Facts) => {
         this.facts = resp;
         this.cargando = false;
         resolve();

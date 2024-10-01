@@ -8,7 +8,7 @@ import { GlobalCostants } from '../global.constants';
 })
 export class HeroService {
   cargando = true;
-  hero: Hero[] = [];
+  hero: Hero = { nombre: '', social: [] };
   private url = `${GlobalCostants.firebaseUrl}/hero.json`;
 
   constructor(private http: HttpClient) {
@@ -17,7 +17,7 @@ export class HeroService {
 
   private cargarHero() {
     return new Promise<void>((resolve, rejects) => {
-      this.http.get<Hero[]>(this.url).subscribe((resp: Hero[]) => {
+      this.http.get<Hero>(this.url).subscribe((resp: Hero) => {
         this.hero = resp;
         this.cargando = false;
         resolve();
