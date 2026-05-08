@@ -16,11 +16,17 @@ export class HeroService {
   }
 
   private cargarHero() {
-    return new Promise<void>((resolve, rejects) => {
-      this.http.get<Hero>(this.url).subscribe((resp: Hero) => {
-        this.hero = resp;
-        this.cargando = false;
-        resolve();
+    return new Promise<void>((resolve, reject) => {
+      this.http.get<Hero>(this.url).subscribe({
+        next: (resp: Hero) => {
+          this.hero = resp;
+          this.cargando = false;
+          resolve();
+        },
+        error: (err) => {
+          this.cargando = false;
+          reject(err);
+        },
       });
     });
   }
