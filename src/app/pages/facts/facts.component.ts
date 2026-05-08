@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -11,10 +11,8 @@ import { FactsService } from '../../services/facts.service';
   templateUrl: './facts.component.html',
   imports: [CommonModule, FontAwesomeModule],
 })
-export class FactsComponent implements OnInit {
+export class FactsComponent {
   constructor(public _facts: FactsService, public library: FaIconLibrary) {
     library.addIconPacks(fas, far);
   }
-
-  ngOnInit(): void {}
 }
