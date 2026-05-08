@@ -5,28 +5,36 @@
       "title": "Ingeniero de Sistemas",
       "date": "2007",
       "institute": "Fundación Universitaria San Martín",
-      "site": "Palmira, Valle, Colombia"
+      "site": "Palmira, Valle, Colombia",
+      "course": ""
     },
     {
       "title": "Bachiller Técnico (Electricidad)",
       "date": "1999",
       "institute": "Instituto Técnico Industrial Providencia",
-      "site": "El Cerrito, Valle, Colombia"
+      "site": "El Cerrito, Valle, Colombia",
+      "course": ""
     },
     {
       "course": "RPA Developer Foundation",
       "date": "Junio 2020",
-      "institute": "UiPath Academy"
+      "institute": "UiPath Academy",
+      "site": "Online",
+      "title": ""
     },
     {
       "course": "Node.js: De cero a experto",
       "date": "Febrero 2020",
-      "institute": "Udemy"
+      "institute": "Udemy",
+      "site": "Online",
+      "title": ""
     },
     {
       "course": "Angular 9, Laravel 5, RxJS",
       "date": "2020 - 2022",
-      "institute": "Udemy"
+      "institute": "Udemy",
+      "site": "Online",
+      "title": ""
     }
   ],
   "experiences": [
