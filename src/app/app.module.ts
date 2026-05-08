@@ -15,7 +15,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { SkillsComponent } from './pages/skills/skills.component';
-import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
+import { ReferencesComponent } from './pages/references/references.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
     ResumeComponent,
     ServicesComponent,
     SkillsComponent,
-    TestimonialsComponent,
+    ReferencesComponent,
   ],
   imports: [
     AppRoutingModule,
