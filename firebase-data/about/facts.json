@@ -1,0 +1,25 @@
+{
+  "descripcion": "Más de 15 años de experiencia continua en desarrollo de software, integración de sistemas y automatización de procesos.",
+  "fact": [
+    {
+      "icono": "calendar-alt",
+      "cantidad": "15+",
+      "descripcion": "Años de experiencia"
+    },
+    {
+      "icono": "building",
+      "cantidad": "6",
+      "descripcion": "Empresas trabajadas"
+    },
+    {
+      "icono": "project-diagram",
+      "cantidad": "12+",
+      "descripcion": "Proyectos entregados"
+    },
+    {
+      "icono": "certificate",
+      "cantidad": "5+",
+      "descripcion": "Certificaciones"
+    }
+  ]
+}
