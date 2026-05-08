@@ -9,7 +9,7 @@
 
     <div class="row">
 
-      <div class="col-6 col-sm-3" *ngFor="let item of _facts.facts?.fact">
+      <div class="col-6 col-sm-3" *ngFor="let item of _facts.facts.fact">
         <div class="count-box">
           <!-- Condicional para mostrar el icono solo si existe -->
           <fa-icon *ngIf="item.icono" [icon]="['fas', item.icono]"></fa-icon>
