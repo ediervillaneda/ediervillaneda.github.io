@@ -1,0 +1,23 @@
+{
+  "descripcion": "Referencias laborales que respaldan mi trayectoria profesional.",
+  "referencias": [
+    {
+      "nombre": "Clara Inés Peñaloza Afanador",
+      "cargo": "Ingeniera Industrial",
+      "empresa": "Taylor & Johnson",
+      "testimonio": "Edier es un profesional altamente competente y comprometido. Su capacidad para resolver problemas complejos y su experiencia en múltiples tecnologías lo convierten en un recurso valioso para cualquier equipo de desarrollo."
+    },
+    {
+      "nombre": "Nathalia Andrea Mejía",
+      "cargo": "Abogada",
+      "empresa": "MB Legal Partners",
+      "testimonio": "He tenido la oportunidad de conocer el trabajo de Edier durante varios años. Destaco su disciplina, honestidad y excelente manejo de relaciones interpersonales. Un profesional que realmente se entrega a sus proyectos."
+    },
+    {
+      "nombre": "María Alejandra Serrano",
+      "cargo": "Ingeniera Civil",
+      "empresa": "Sika Colombia S.A.S.",
+      "testimonio": "Edier demuestra un alto nivel de profesionalismo y dedicación en cada proyecto que emprende. Su habilidad para adaptarse a diferentes tecnologías y entornos de trabajo es realmente admirable. Altamente recomendado."
+    }
+  ]
+}

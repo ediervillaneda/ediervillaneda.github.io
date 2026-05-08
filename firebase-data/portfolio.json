@@ -1,0 +1,111 @@
+{
+  "descripcion": "Proyectos desarrollados en sectores financiero, salud y corporativo, abarcando múltiples tecnologías y plataformas.",
+  "items": [
+    {
+      "titulo": "Leasing Bancolombia",
+      "categoria": "filter-app",
+      "tipo": "Mainframe",
+      "subtipo": "IBMi",
+      "descripcion": "Sistema de gestión de leasing financiero sobre plataforma IBMi para uno de los principales bancos de Colombia.",
+      "tecnologias": [
+        { "nombre": "IBMi", "color": "#4a5568", "textColor": "#e2e8f0" },
+        { "nombre": "RPG ILE", "color": "#718096", "textColor": "#e2e8f0" },
+        { "nombre": "COBOL", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Clínica de las Américas",
+      "categoria": "filter-web",
+      "tipo": "Web",
+      "subtipo": "Salud",
+      "descripcion": "Plataforma de gestión de citas y expedientes médicos para clínica de alta complejidad en Medellín.",
+      "tecnologias": [
+        { "nombre": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+        { "nombre": "Node.js", "color": "#4a7c59", "textColor": "#d8f0e0" },
+        { "nombre": "MySQL", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Pactia Portal Corporativo",
+      "categoria": "filter-card",
+      "tipo": "Financiero",
+      "subtipo": "DevOps",
+      "descripcion": "Portal corporativo para gestión de activos inmobiliarios con integración a pipelines CI/CD en Azure.",
+      "tecnologias": [
+        { "nombre": "Azure DevOps", "color": "#4a8fa8", "textColor": "#daf0f8" },
+        { "nombre": "Angular", "color": "#3a6186", "textColor": "#dce8f5" },
+        { "nombre": ".NET", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Votre / Leonisa",
+      "categoria": "filter-app",
+      "tipo": "Mainframe",
+      "subtipo": "IBMi",
+      "descripcion": "Módulos de producción, inventario y distribución para empresa líder de moda en Latinoamérica sobre AS/400.",
+      "tecnologias": [
+        { "nombre": "IBMi", "color": "#4a5568", "textColor": "#e2e8f0" },
+        { "nombre": "RPG ILE", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Intersoftware Bioseguridad",
+      "categoria": "filter-web",
+      "tipo": "Web",
+      "subtipo": "Salud",
+      "descripcion": "Sistema de control de bioseguridad y seguimiento de protocolos sanitarios en instituciones de salud.",
+      "tecnologias": [
+        { "nombre": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+        { "nombre": "jQuery", "color": "#9a7c2e", "textColor": "#fef3c7" },
+        { "nombre": "MySQL", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Certadata AS/400",
+      "categoria": "filter-card",
+      "tipo": "Financiero",
+      "subtipo": "AS/400",
+      "descripcion": "Desarrollo y mantenimiento de módulos financieros y contables sobre plataforma AS/400 para sector bancario.",
+      "tecnologias": [
+        { "nombre": "COBOL/400", "color": "#4a5568", "textColor": "#e2e8f0" },
+        { "nombre": "IBMi", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Premize PHP + Oracle",
+      "categoria": "filter-web",
+      "tipo": "Web",
+      "subtipo": "Corporativo",
+      "descripcion": "Plataforma de gestión de incentivos y comisiones para fuerza de ventas con backend Oracle y PHP Symfony.",
+      "tecnologias": [
+        { "nombre": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+        { "nombre": "Oracle", "color": "#8b3a3a", "textColor": "#fde8e8" },
+        { "nombre": "Symfony", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Coomeva EPS",
+      "categoria": "filter-card",
+      "tipo": "Financiero",
+      "subtipo": "Salud",
+      "descripcion": "Sistema de autorización de procedimientos médicos y gestión de afiliados para cooperativa de salud.",
+      "tecnologias": [
+        { "nombre": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+        { "nombre": "Oracle", "color": "#8b3a3a", "textColor": "#fde8e8" },
+        { "nombre": "Laravel", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    },
+    {
+      "titulo": "Felinux Plataforma PANCE",
+      "categoria": "filter-web",
+      "tipo": "Web",
+      "subtipo": "Educación",
+      "descripcion": "Plataforma de evaluación y preparación para el examen PANCE de licenciados en medicina veterinaria.",
+      "tecnologias": [
+        { "nombre": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+        { "nombre": "jQuery", "color": "#9a7c2e", "textColor": "#fef3c7" },
+        { "nombre": "MySQL", "color": "#718096", "textColor": "#e2e8f0" }
+      ]
+    }
+  ]
+}
