@@ -170,14 +170,6 @@
     aos_init();
   });
 
-  // References carousel (uses the Owl Carousel library)
-  $(".references-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1,
-  });
-
   // Portfolio details carousel
   $(".portfolio-details-carousel").owlCarousel({
     autoplay: true,
