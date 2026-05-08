@@ -20,15 +20,20 @@ export class AboutService {
 
   private cargarAbout() {
     let date: Date;
-    return new Promise<void>((resolve, rejects) => {
-      this.http.get<About>(this.url).subscribe((resp: About) => {
-        this.cargando = false;
-        this.about = resp;
-
-        date = new Date(resp['birthday']);
-        this.about.birthday = date.toISOString().slice(0, 10);
-        this.about.age = this.calcularEdad(date);
-        resolve();
+    return new Promise<void>((resolve, reject) => {
+      this.http.get<About>(this.url).subscribe({
+        next: (resp: About) => {
+          this.cargando = false;
+          this.about = resp;
+          date = new Date(resp['birthday']);
+          this.about.birthday = date.toISOString().slice(0, 10);
+          this.about.age = this.calcularEdad(date);
+          resolve();
+        },
+        error: (err) => {
+          this.cargando = false;
+          reject(err);
+        },
       });
     });
   }

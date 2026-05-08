@@ -17,11 +17,17 @@ export class FactsService {
   }
 
   private cargarFacts() {
-    return new Promise<void>((resolve, rejects) => {
-      this.http.get<Facts>(this.url).subscribe((resp: Facts) => {
-        this.facts = resp;
-        this.cargando = false;
-        resolve();
+    return new Promise<void>((resolve, reject) => {
+      this.http.get<Facts>(this.url).subscribe({
+        next: (resp: Facts) => {
+          this.facts = resp;
+          this.cargando = false;
+          resolve();
+        },
+        error: (err) => {
+          this.cargando = false;
+          reject(err);
+        },
       });
     });
   }

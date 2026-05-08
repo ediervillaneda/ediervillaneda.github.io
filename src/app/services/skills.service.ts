@@ -12,19 +12,24 @@ export class SkillsService {
   skills: Skills = {
     descripcion: ''
   };
-  private url = `${GlobalCostants.firebaseUrl}//about/skills.json`;
-  // private url = `${GlobalCostants.firebaseUrl}/hero.json`;
+  private url = `${GlobalCostants.firebaseUrl}/about/skills.json`;
 
   constructor(private http: HttpClient) {
     this.cargarSkills();
   }
 
   private cargarSkills() {
-    return new Promise<void>((resolve, rejects) => {
-      this.http.get<Skills>(this.url).subscribe((resp: Skills) => {
-        this.skills = resp;
-        this.cargando = false;
-        resolve();
+    return new Promise<void>((resolve, reject) => {
+      this.http.get<Skills>(this.url).subscribe({
+        next: (resp: Skills) => {
+          this.skills = resp;
+          this.cargando = false;
+          resolve();
+        },
+        error: (err) => {
+          this.cargando = false;
+          reject(err);
+        },
       });
     });
   }

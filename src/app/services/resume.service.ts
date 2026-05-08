@@ -19,11 +19,17 @@ export class ResumeService {
     this.cargarResumen();
   }
   cargarResumen() {
-    return new Promise<void>((resolve, rejects) => {
-      this.http.get<Resume>(this.url).subscribe((resp: Resume) => {
-        this.resume = resp;
-        this.cargando = false;
-        resolve();
+    return new Promise<void>((resolve, reject) => {
+      this.http.get<Resume>(this.url).subscribe({
+        next: (resp: Resume) => {
+          this.resume = resp;
+          this.cargando = false;
+          resolve();
+        },
+        error: (err) => {
+          this.cargando = false;
+          reject(err);
+        },
       });
     });
   }

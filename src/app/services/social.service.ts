@@ -19,11 +19,17 @@ export class SocialService {
   }
 
   private cargarSocial() {
-    return new Promise<void>((resolve, rejects) => {
-      this.http.get<Social>(this.url).subscribe((resp: Social) => {
-        this.social = resp;
-        this.cargando = false;
-        resolve();
+    return new Promise<void>((resolve, reject) => {
+      this.http.get<Social>(this.url).subscribe({
+        next: (resp: Social) => {
+          this.social = resp;
+          this.cargando = false;
+          resolve();
+        },
+        error: (err) => {
+          this.cargando = false;
+          reject(err);
+        },
       });
     });
   }
