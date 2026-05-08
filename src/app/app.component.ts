@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { AboutService } from './services/about.service';
 import { HeroService } from './services/hero.service';
 import { SocialService } from './services/social.service';
@@ -20,6 +21,7 @@ import { FooterComponent } from './share/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   imports: [
+    CommonModule,
     HeaderComponent,
     HeroComponent,
     AboutComponent,

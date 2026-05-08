@@ -4,195 +4,40 @@
 
     <div class="section-title">
       <h2>Portafolio</h2>
-      <p>Proyectos desarrollados en sectores financiero, salud y corporativo, abarcando múltiples tecnologías y plataformas.</p>
+      <p>{{ _portfolio.portfolio.descripcion }}</p>
     </div>
 
     <div class="row">
       <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <ul id="portfolio-flters">
-          <li data-filter="*" class="filter-active">Todos</li>
-          <li data-filter=".filter-app">Mainframe</li>
-          <li data-filter=".filter-card">Financiero</li>
-          <li data-filter=".filter-web">Web</li>
+          <li [class.filter-active]="activeFilter === '*'" (click)="setFilter('*')">Todos</li>
+          <li [class.filter-active]="activeFilter === 'filter-app'" (click)="setFilter('filter-app')">Mainframe</li>
+          <li [class.filter-active]="activeFilter === 'filter-card'" (click)="setFilter('filter-card')">Financiero</li>
+          <li [class.filter-active]="activeFilter === 'filter-web'" (click)="setFilter('filter-web')">Web</li>
         </ul>
       </div>
     </div>
 
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+    <div class="row portfolio-grid" data-aos="fade-up" data-aos-delay="200">
 
-      <!-- Leasing Bancolombia — Mainframe -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app mb-4">
+      <div *ngFor="let item of filteredItems" class="col-lg-4 col-md-6 portfolio-item mb-4">
         <div class="card h-100 shadow-sm border-0">
           <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#4a5568; color:#e2e8f0;">
-            <span class="badge" style="background-color:#718096; color:#e2e8f0;">Mainframe</span>
-            <small style="color:#a0aec0;">IBMi</small>
+               [style.background-color]="getHeaderStyle(item.tipo).bg"
+               [style.color]="getHeaderStyle(item.tipo).text">
+            <span class="badge"
+                  [style.background-color]="getHeaderStyle(item.tipo).bg"
+                  [style.color]="getHeaderStyle(item.tipo).text"
+                  style="opacity:0.8;">{{ item.tipo }}</span>
+            <small [style.color]="getHeaderStyle(item.tipo).text" style="opacity:0.7;">{{ item.subtipo }}</small>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Leasing Bancolombia</h5>
-            <p class="card-text text-muted">Sistema de gestión de leasing financiero sobre plataforma IBMi para uno de los principales bancos de Colombia.</p>
+            <h5 class="card-title">{{ item.titulo }}</h5>
+            <p class="card-text text-muted">{{ item.descripcion }}</p>
             <div class="mt-2">
-              <span class="badge me-1" style="background-color:#4a5568; color:#e2e8f0;">IBMi</span>
-              <span class="badge me-1" style="background-color:#718096; color:#e2e8f0;">RPG ILE</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">COBOL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Clínica de las Américas — Web / Salud -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3a6186; color:#dce8f5;">
-            <span class="badge" style="background-color:#dce8f5; color:#3a6186;">Web</span>
-            <small style="color:#a8c8e8;">Salud</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Clínica de las Américas</h5>
-            <p class="card-text text-muted">Plataforma de gestión de citas y expedientes médicos para clínica de alta complejidad en Medellín.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#3a6186; color:#dce8f5;">PHP</span>
-              <span class="badge me-1" style="background-color:#4a7c59; color:#d8f0e0;">Node.js</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">MySQL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Pactia Portal Corporativo — Financiero / DevOps -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3d7a5e; color:#d8f0e4;">
-            <span class="badge" style="background-color:#d8f0e4; color:#3d7a5e;">Financiero</span>
-            <small style="color:#a3d4b8;">DevOps</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Pactia Portal Corporativo</h5>
-            <p class="card-text text-muted">Portal corporativo para gestión de activos inmobiliarios con integración a pipelines CI/CD en Azure.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#4a8fa8; color:#daf0f8;">Azure DevOps</span>
-              <span class="badge me-1" style="background-color:#3a6186; color:#dce8f5;">Angular</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">.NET</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Votre / Leonisa — Mainframe -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#4a5568; color:#e2e8f0;">
-            <span class="badge" style="background-color:#718096; color:#e2e8f0;">Mainframe</span>
-            <small style="color:#a0aec0;">IBMi</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Votre / Leonisa</h5>
-            <p class="card-text text-muted">Módulos de producción, inventario y distribución para empresa líder de moda en Latinoamérica sobre AS/400.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#4a5568; color:#e2e8f0;">IBMi</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">RPG ILE</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Intersoftware Bioseguridad — Web / Salud -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3a6186; color:#dce8f5;">
-            <span class="badge" style="background-color:#dce8f5; color:#3a6186;">Web</span>
-            <small style="color:#a8c8e8;">Salud</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Intersoftware Bioseguridad</h5>
-            <p class="card-text text-muted">Sistema de control de bioseguridad y seguimiento de protocolos sanitarios en instituciones de salud.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#3a6186; color:#dce8f5;">PHP</span>
-              <span class="badge me-1" style="background-color:#9a7c2e; color:#fef3c7;">jQuery</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">MySQL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Certadata AS/400 — Financiero -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3d7a5e; color:#d8f0e4;">
-            <span class="badge" style="background-color:#d8f0e4; color:#3d7a5e;">Financiero</span>
-            <small style="color:#a3d4b8;">AS/400</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Certadata AS/400</h5>
-            <p class="card-text text-muted">Desarrollo y mantenimiento de módulos financieros y contables sobre plataforma AS/400 para sector bancario.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#4a5568; color:#e2e8f0;">COBOL/400</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">IBMi</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Premize PHP + Oracle — Web / Corporativo -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3a6186; color:#dce8f5;">
-            <span class="badge" style="background-color:#dce8f5; color:#3a6186;">Web</span>
-            <small style="color:#a8c8e8;">Corporativo</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Premize PHP + Oracle</h5>
-            <p class="card-text text-muted">Plataforma de gestión de incentivos y comisiones para fuerza de ventas con backend Oracle y PHP Symfony.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#3a6186; color:#dce8f5;">PHP</span>
-              <span class="badge me-1" style="background-color:#8b3a3a; color:#fde8e8;">Oracle</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">Symfony</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Coomeva EPS — Financiero / Salud -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3d7a5e; color:#d8f0e4;">
-            <span class="badge" style="background-color:#d8f0e4; color:#3d7a5e;">Financiero</span>
-            <small style="color:#a3d4b8;">Salud</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Coomeva EPS</h5>
-            <p class="card-text text-muted">Sistema de autorización de procedimientos médicos y gestión de afiliados para cooperativa de salud.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#3a6186; color:#dce8f5;">PHP</span>
-              <span class="badge me-1" style="background-color:#8b3a3a; color:#fde8e8;">Oracle</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">Laravel</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Felinux Plataforma PANCE — Web / Educación -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-web mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               style="background-color:#3a6186; color:#dce8f5;">
-            <span class="badge" style="background-color:#dce8f5; color:#3a6186;">Web</span>
-            <small style="color:#a8c8e8;">Educación</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Felinux Plataforma PANCE</h5>
-            <p class="card-text text-muted">Plataforma de evaluación y preparación para el examen PANCE de licenciados en medicina veterinaria.</p>
-            <div class="mt-2">
-              <span class="badge me-1" style="background-color:#3a6186; color:#dce8f5;">PHP</span>
-              <span class="badge me-1" style="background-color:#9a7c2e; color:#fef3c7;">jQuery</span>
-              <span class="badge" style="background-color:#718096; color:#e2e8f0;">MySQL</span>
+              <span *ngFor="let tech of item.tecnologias" class="badge me-1"
+                    [style.background-color]="tech.color"
+                    [style.color]="tech.textColor">{{ tech.nombre }}</span>
             </div>
           </div>
         </div>
