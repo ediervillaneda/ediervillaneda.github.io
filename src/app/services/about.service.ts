@@ -30,7 +30,7 @@ export class AboutService {
           this.about.age = this.calcularEdad(date);
           resolve();
         },
-        error: (err) => {
+        error: (err: unknown) => {
           this.cargando = false;
           reject(err);
         },

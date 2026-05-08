@@ -23,7 +23,7 @@ export class HeroService {
           this.cargando = false;
           resolve();
         },
-        error: (err) => {
+        error: (err: unknown) => {
           this.cargando = false;
           reject(err);
         },
