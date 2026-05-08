@@ -11,7 +11,7 @@ import { FactsService } from '../../services/facts.service';
   templateUrl: './facts.component.html',
   imports: [CommonModule, FontAwesomeModule],
 })
-export class FactsComponent  {
+export class FactsComponent {
   constructor(public _facts: FactsService, public library: FaIconLibrary) {
     library.addIconPacks(fas, far);
   }
