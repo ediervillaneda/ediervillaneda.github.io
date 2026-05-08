@@ -1,0 +1,61 @@
+{
+  "age": 43,
+  "birthday": "1982-06-18",
+  "city": "El Cerrito",
+  "country": "Colombia",
+  "descripcion": "Ingeniero de Sistemas con más de 15 años de experiencia en desarrollo de software en sectores financiero, salud y corporativo. Experto en IBMi (RPG ILE, COBOL/400), PHP, Node.js y Angular. Apasionado por la integración de sistemas legacy con tecnologías modernas, la automatización de procesos y la calidad del software.",
+  "descripcion2": "Senior Software Developer con amplia trayectoria en análisis, desarrollo y mantenimiento de soluciones corporativas.",
+  "descripcion3": "Con experiencia en múltiples stacks tecnológicos que abarcan desde mainframe IBMi hasta frontend moderno. Certificado en RPA con UiPath, con conocimientos en Docker, Jenkins y prácticas DevOps. Enfocado en la entrega de soluciones robustas, escalables y de alto valor para el negocio.",
+  "email": "ediervillaneda@gmail.com",
+  "phone": "(+57) 319-248-6175",
+  "titulo": "Senior Software Developer | Analista Desarrollador de Software | Roles en TI",
+  "degree": "Ingeniero de Sistemas",
+  "website": "https://ediervillaneda.github.io/",
+  "freelance": "Disponible",
+  "imagen": "assets/img/profile-img.jpg",
+  "skills": {
+    "descripcion": "Más de 15 años de experiencia en desarrollo de software en múltiples plataformas y lenguajes.",
+    "skill": [
+      {
+        "skill": "IBM i / RPG ILE / COBOL",
+        "porcentaje": "95%"
+      },
+      {
+        "skill": "PHP / Symfony / Laravel",
+        "porcentaje": "90%"
+      },
+      {
+        "skill": "JavaScript / TypeScript / Angular",
+        "porcentaje": "85%"
+      },
+      {
+        "skill": "Node.js",
+        "porcentaje": "80%"
+      },
+      {
+        "skill": "Oracle PL/SQL",
+        "porcentaje": "90%"
+      },
+      {
+        "skill": "Git / Azure DevOps / CI/CD",
+        "porcentaje": "85%"
+      },
+      {
+        "skill": "Docker / Jenkins / Kubernetes",
+        "porcentaje": "60%"
+      },
+      {
+        "skill": "Vue.js / React",
+        "porcentaje": "50%"
+      },
+      {
+        "skill": "UiPath RPA",
+        "porcentaje": "75%"
+      },
+      {
+        "skill": "C# / .NET",
+        "porcentaje": "65%"
+      }
+    ]
+  }
+}

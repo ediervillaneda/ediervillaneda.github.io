@@ -1,0 +1,109 @@
+{
+  "descripcion": "Ingeniero de Sistemas con más de 15 años de experiencia en desarrollo de software en sectores financiero, salud y corporativo. Experto en IBMi, PHP, Node.js y Angular.",
+  "educations": [
+    {
+      "title": "Ingeniero de Sistemas",
+      "date": "2007",
+      "institute": "Fundación Universitaria San Martín",
+      "site": "Palmira, Valle, Colombia"
+    },
+    {
+      "title": "Bachiller Técnico (Electricidad)",
+      "date": "1999",
+      "institute": "Instituto Técnico Industrial Providencia",
+      "site": "El Cerrito, Valle, Colombia"
+    },
+    {
+      "course": "RPA Developer Foundation",
+      "date": "Junio 2020",
+      "institute": "UiPath Academy"
+    },
+    {
+      "course": "Node.js: De cero a experto",
+      "date": "Febrero 2020",
+      "institute": "Udemy"
+    },
+    {
+      "course": "Angular 9, Laravel 5, RxJS",
+      "date": "2020 - 2022",
+      "institute": "Udemy"
+    }
+  ],
+  "experiences": [
+    {
+      "position": "Senior Software Developer",
+      "start_date": "Enero 2019",
+      "end_date": false,
+      "city": "Medellín, Antioquia",
+      "company": "PersonalSoft S.A.S.",
+      "description": [
+        "Desarrollo y mantenimiento de soluciones corporativas en IBMi / RPG ILE para Leasing Bancolombia (Oct. 2022 - Act.), implementando mejoras y resolviendo incidentes en procesos y datos del sistema de leasing.",
+        "Desarrollo de requerimientos sobre plataforma Matrix para gestión hospitalaria en Clínica de las Américas usando PHP y Node.js (Ene. 2021 - Oct. 2022).",
+        "Certificación integral de la plataforma Pactia en Azure DevOps, asegurando calidad y conformidad funcional del portal corporativo (Ago. 2021 - Ene. 2022).",
+        "Desarrollo de aplicación piloto y análisis de documentación para Historias de Usuario en Intersoftware con PHP (Jun. 2020 - Ago. 2021).",
+        "Desarrollo del Portal de Gerentes y migración de plataforma OP 4.0 a 4.2 en Votre / Leonisa usando IBMi / RPG ILE (Jun. 2019 - Abr. 2020)."
+      ]
+    },
+    {
+      "position": "Desarrollador Unidad de Mantenimiento y Soporte",
+      "start_date": "Abril 2015",
+      "end_date": "Enero 2019",
+      "city": "Santiago de Cali, Valle",
+      "company": "Certadata S.A.S.",
+      "description": [
+        "Gestión y desarrollo de proyectos en COBOL/400 y COBOL ILE sobre AS/400 iSeries para el sector financiero.",
+        "Integración con Visionamos mediante Web Services (AS/400 ↔ servidor externo).",
+        "Desarrollo con SDA, RLU, PDM y soporte en RPG ILE.",
+        "Desarrollo y mantenimiento de Servicios de Windows en C#."
+      ]
+    },
+    {
+      "position": "Analista de Tecnología Informática",
+      "start_date": "Noviembre 2012",
+      "end_date": "Abril 2014",
+      "city": "Santiago de Cali, Valle",
+      "company": "Premize S.A.S.",
+      "description": [
+        "Ciclo completo de proyectos PHP + Oracle: análisis, estimación, desarrollo y despliegue.",
+        "Optimización de queries y reportes de alto volumen con PL/SQL Oracle.",
+        "Implementación de Web Services, Symfony, AJAX y control de versiones Git/SVN.",
+        "Automatización con macros Excel y minería de datos."
+      ]
+    },
+    {
+      "position": "Analista de Desarrollo Outsourcing",
+      "start_date": "Agosto 2012",
+      "end_date": "Noviembre 2012",
+      "city": "Santiago de Cali, Valle",
+      "company": "Intergrupo S.A.",
+      "description": [
+        "Proyecto Recobros Tercer Pagador en PHP Symfony 2 + Oracle para el sector salud.",
+        "Desarrollo de Web Services y optimización PL/SQL Oracle."
+      ]
+    },
+    {
+      "position": "Analista Nacional de Tecnología",
+      "start_date": "Marzo 2011",
+      "end_date": "Marzo 2012",
+      "city": "Santiago de Cali, Valle",
+      "company": "Coomeva EPS",
+      "description": [
+        "Desarrollo de aplicaciones web PHP + Oracle para procesos críticos de la EPS a nivel nacional.",
+        "Implementación de Web Services, PL/SQL y frameworks JavaScript.",
+        "Automatización de procesos y optimización de consultas."
+      ]
+    },
+    {
+      "position": "Analista Desarrollador",
+      "start_date": "Junio 2008",
+      "end_date": "Marzo 2010",
+      "city": "Santiago de Cali, Valle",
+      "company": "Felinux Ltda",
+      "description": [
+        "Migración y desarrollo web con PHP, JavaScript, jQuery, HTML y CSS.",
+        "Desarrollo de plataforma PANCE.",
+        "Administración de MySQL y servidores Linux."
+      ]
+    }
+  ]
+}

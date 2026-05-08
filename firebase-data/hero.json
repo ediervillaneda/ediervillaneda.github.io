@@ -1,0 +1,27 @@
+{
+  "heroImg": "assets/img/hero-bg.jpg",
+  "nombre": "Edier Andrés Villaneda Navarro",
+  "rol": "Senior Software Developer",
+  "social": [
+    {
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/ediervillaneda/"
+    },
+    {
+      "icon": "github",
+      "url": "https://github.com/ediervillaneda"
+    },
+    {
+      "icon": "facebook",
+      "url": "https://www.facebook.com/ediervillaneda"
+    },
+    {
+      "icon": "instagram",
+      "url": "https://www.instagram.com/ediervillaneda/"
+    },
+    {
+      "icon": "twitter",
+      "url": "https://twitter.com/EdierVillaneda"
+    }
+  ]
+}
