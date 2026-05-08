@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-references',
   templateUrl: './references.component.html',
 })
-export class ReferencesComponent implements OnInit {
+export class ReferencesComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
