@@ -42,3 +42,9 @@ testem.log
 .DS_Store
 Thumbs.db
 sonar-project.properties
+
+# Claude Code
+.claude/
+
+# Windows artifacts
+nul
