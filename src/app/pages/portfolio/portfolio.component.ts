@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor, NgClass } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { PortfolioService } from '../../services/portfolio.service';
 import { PortfolioItem } from '../../interfaces/portfolio.interface';
 
@@ -7,7 +7,7 @@ import { PortfolioItem } from '../../interfaces/portfolio.interface';
   standalone: true,
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  imports: [NgFor, NgClass],
+  imports: [NgFor],
 })
 export class PortfolioComponent {
   activeFilter = '*';
