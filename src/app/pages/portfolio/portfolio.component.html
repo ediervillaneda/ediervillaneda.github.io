@@ -20,28 +20,32 @@
 
     <div class="row portfolio-grid" data-aos="fade-up" data-aos-delay="200">
 
-      <div *ngFor="let item of filteredItems" class="col-lg-4 col-md-6 portfolio-item mb-4">
-        <div class="card h-100 shadow-sm border-0">
-          <div class="card-header d-flex justify-content-between align-items-center"
-               [style.background-color]="getHeaderStyle(item.tipo).bg"
-               [style.color]="getHeaderStyle(item.tipo).text">
-            <span class="badge"
-                  [style.background-color]="getHeaderStyle(item.tipo).bg"
-                  [style.color]="getHeaderStyle(item.tipo).text"
-                  style="opacity:0.8;">{{ item.tipo }}</span>
-            <small [style.color]="getHeaderStyle(item.tipo).text" style="opacity:0.7;">{{ item.subtipo }}</small>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{{ item.titulo }}</h5>
-            <p class="card-text text-muted">{{ item.descripcion }}</p>
-            <div class="mt-2">
-              <span *ngFor="let tech of item.tecnologias" class="badge me-1"
-                    [style.background-color]="tech.color"
-                    [style.color]="tech.textColor">{{ tech.nombre }}</span>
+      @for (item of filteredItems; track item.titulo) {
+        <div class="col-lg-4 col-md-6 portfolio-item mb-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-header d-flex justify-content-between align-items-center"
+                 [style.background-color]="getHeaderStyle(item.tipo).bg"
+                 [style.color]="getHeaderStyle(item.tipo).text">
+              <span class="badge"
+                    [style.background-color]="getHeaderStyle(item.tipo).bg"
+                    [style.color]="getHeaderStyle(item.tipo).text"
+                    style="opacity:0.8;">{{ item.tipo }}</span>
+              <small [style.color]="getHeaderStyle(item.tipo).text" style="opacity:0.7;">{{ item.subtipo }}</small>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ item.titulo }}</h5>
+              <p class="card-text text-muted">{{ item.descripcion }}</p>
+              <div class="mt-2">
+                @for (tech of item.tecnologias; track tech.nombre) {
+                  <span class="badge me-1"
+                        [style.background-color]="tech.color"
+                        [style.color]="tech.textColor">{{ tech.nombre }}</span>
+                }
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      }
 
     </div>
 

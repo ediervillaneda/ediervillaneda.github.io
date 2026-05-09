@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
 import { PortfolioService } from '../../services/portfolio.service';
 import { PortfolioItem } from '../../interfaces/portfolio.interface';
 
@@ -7,12 +6,12 @@ import { PortfolioItem } from '../../interfaces/portfolio.interface';
   standalone: true,
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  imports: [NgFor],
+  imports: [],
 })
 export class PortfolioComponent {
   activeFilter = '*';
 
-  private headerStyles: Record<string, { bg: string; text: string }> = {
+  private readonly headerStyles: Record<string, { bg: string; text: string }> = {
     Mainframe: { bg: '#4a5568', text: '#e2e8f0' },
     Web: { bg: '#3a6186', text: '#dce8f5' },
     Financiero: { bg: '#3d7a5e', text: '#d8f0e4' },
