@@ -8,8 +8,9 @@ Personal portfolio / CV site for Edier Villaneda, built with Angular 21 (standal
 
 - `npm start` — dev server at http://localhost:4200
 - `npm run build` — production build to `dist/` (browser output lands in `dist/browser`)
-- `npm test` — Karma/Jasmine in watch mode; for a single run: `npx ng test --watch=false`
+- `npm test` — Karma/Jasmine in watch mode; `npm run test:ci` for a single headless run (what CI uses)
 - Single spec: `npx ng test --watch=false --include src/app/services/resume.service.spec.ts`
+- Specs use standalone `imports: [Component]` plus `provideHttpClient(), provideHttpClientTesting()`; services hit Firebase in their constructors, so specs must never make real HTTP calls
 - `npm run release` — pulls tags and bumps the **minor** version (`npm version minor`, commit message "Update to x.y.z")
 
 There is no lint script configured.
