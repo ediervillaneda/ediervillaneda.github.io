@@ -1,27 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { AboutService } from '../../services/about.service';
-import { HeroService } from '../../services/hero.service';
-import { SocialService } from 'src/app/services/social.service';
+import { Component, inject } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+
+import { ContentService } from '../../content/content.service';
 
 @Component({
-  standalone: true,
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css'],
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [FaIconComponent],
 })
-export class HeroComponent implements OnInit {
-  constructor(
-    public _hero: HeroService,
-    public _social: SocialService,
-    public _about: AboutService,
-    public library: FaIconLibrary
-  ) {
-    library.addIconPacks(fab);
-  }
-
-  ngOnInit(): void {}
+export class HeroComponent {
+  protected readonly content = inject(ContentService);
 }

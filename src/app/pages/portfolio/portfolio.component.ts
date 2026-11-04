@@ -1,35 +1,50 @@
-import { Component } from '@angular/core';
-import { PortfolioService } from '../../services/portfolio.service';
-import { PortfolioItem } from '../../interfaces/portfolio.interface';
+import { Component, computed, inject, signal } from '@angular/core';
+
+import { PortfolioCategoryId } from '../../content/content.model';
+import { ContentService } from '../../content/content.service';
+
+interface HeaderStyle {
+  bg: string;
+  text: string;
+}
+
+const HEADER_STYLES: Record<PortfolioCategoryId, HeaderStyle> = {
+  mainframe: { bg: '#4a5568', text: '#e2e8f0' },
+  web: { bg: '#3a6186', text: '#dce8f5' },
+  financial: { bg: '#3d7a5e', text: '#d8f0e4' },
+};
 
 @Component({
-  standalone: true,
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  imports: [],
 })
 export class PortfolioComponent {
-  activeFilter = '*';
+  protected readonly content = inject(ContentService);
 
-  private readonly headerStyles: Record<string, { bg: string; text: string }> = {
-    Mainframe: { bg: '#4a5568', text: '#e2e8f0' },
-    Web: { bg: '#3a6186', text: '#dce8f5' },
-    Financiero: { bg: '#3d7a5e', text: '#d8f0e4' },
-  };
+  /** Selected category, or `null` for all projects. */
+  readonly activeFilter = signal<PortfolioCategoryId | null>(null);
 
-  constructor(public _portfolio: PortfolioService) {}
+  private readonly portfolio = computed(() => this.content.content()?.portfolio);
 
-  get filteredItems(): PortfolioItem[] {
-    const items = this._portfolio.portfolio.items ?? [];
-    if (this.activeFilter === '*') return items;
-    return items.filter(item => item.categoria === this.activeFilter);
+  readonly filteredItems = computed(() => {
+    const items = this.portfolio()?.items ?? [];
+    const filter = this.activeFilter();
+    return filter ? items.filter((item) => item.category === filter) : items;
+  });
+
+  private readonly labels = computed(
+    () => new Map(this.portfolio()?.categories.map((category) => [category.id, category.label])),
+  );
+
+  setFilter(filter: PortfolioCategoryId | null): void {
+    this.activeFilter.set(filter);
   }
 
-  setFilter(filter: string) {
-    this.activeFilter = filter;
+  protected label(category: PortfolioCategoryId): string {
+    return this.labels().get(category) ?? category;
   }
 
-  getHeaderStyle(tipo: string) {
-    return this.headerStyles[tipo] || { bg: '#4a5568', text: '#e2e8f0' };
+  protected headerStyle(category: PortfolioCategoryId): HeaderStyle {
+    return HEADER_STYLES[category];
   }
 }

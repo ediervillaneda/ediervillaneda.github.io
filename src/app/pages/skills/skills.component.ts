@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AboutService } from 'src/app/services/about.service';
+import { Component, computed, inject } from '@angular/core';
+
+import { ContentService } from '../../content/content.service';
+import { InViewDirective } from '../../share/in-view.directive';
 
 @Component({
-  standalone: true,
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  imports: [CommonModule],
+  imports: [InViewDirective],
 })
-export class SkillsComponent implements OnInit {
-  constructor(public _about: AboutService) {}
+export class SkillsComponent {
+  protected readonly content = inject(ContentService);
 
-  ngOnInit(): void {}
+  /** Skills split into two balanced columns. */
+  readonly columns = computed(() => {
+    const items = this.content.content()?.skills.items ?? [];
+    const half = Math.ceil(items.length / 2);
+    return [items.slice(0, half), items.slice(half)];
+  });
 }

@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+
+import { ContentService } from '../../content/content.service';
 
 @Component({
-  standalone: true,
   selector: 'app-contact',
   templateUrl: './contact.component.html',
+  imports: [FaIconComponent],
 })
 export class ContactComponent {
-  constructor() {}
+  protected readonly content = inject(ContentService);
 }

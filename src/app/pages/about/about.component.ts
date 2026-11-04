@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AboutService } from '../../services/about.service';
+import { Component, inject } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+
+import { ContentService } from '../../content/content.service';
 
 @Component({
-  standalone: true,
   selector: 'app-about',
   templateUrl: './about.component.html',
-  imports: [CommonModule],
+  imports: [FaIconComponent],
 })
-export class AboutComponent implements OnInit {
-  constructor(public _about: AboutService) {}
-
-  ngOnInit(): void {}
+export class AboutComponent {
+  protected readonly content = inject(ContentService);
 }

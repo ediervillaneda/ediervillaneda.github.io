@@ -1,18 +1,21 @@
-<app-header></app-header>
-
-<!-- ======= Hero Section ======= -->
-<app-hero></app-hero>
-<!-- End Hero -->
+<app-header />
+<app-hero />
 
 <main id="main">
-  <app-about></app-about>
-  <app-facts></app-facts>
-  <app-skills></app-skills>
-  <app-resume></app-resume>
-  <app-portfolio></app-portfolio>
-  <app-services></app-services>
-  <app-references></app-references>
-  <app-contact></app-contact>
+  @if (content.error()) {
+    <div class="container py-5 text-center" role="alert">
+      No se pudo cargar el contenido. / The content could not be loaded.
+    </div>
+  }
+  <app-about />
+  <app-facts />
+  <app-skills />
+  <app-resume />
+  <app-portfolio />
+  <app-services />
+  <app-references />
+  <app-contact />
 </main>
 
-<app-footer></app-footer>
+<app-footer />
+<app-back-to-top />

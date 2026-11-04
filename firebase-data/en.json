@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "title": "Edier Villaneda | Senior Software Developer",
+    "description": "Personal website of Edier Andrés Villaneda Navarro, Senior Software Developer specialized in IBM i, PHP, Node.js and Angular."
+  },
+  "ui": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "resume": "Resume",
+      "portfolio": "Portfolio",
+      "services": "Services",
+      "references": "References",
+      "contact": "Contact"
+    },
+    "sections": {
+      "about": "About",
+      "facts": "Facts",
+      "skills": "Skills",
+      "resume": "Resume",
+      "portfolio": "Portfolio",
+      "services": "Services",
+      "references": "References",
+      "contact": "Contact"
+    },
+    "about": {
+      "website": "Website",
+      "city": "City",
+      "degree": "Degree",
+      "email": "Email",
+      "freelance": "Freelance",
+      "photoAlt": "Profile photo of Edier Villaneda"
+    },
+    "resume": {
+      "education": "Education",
+      "courses": "Courses",
+      "experience": "Professional Experience",
+      "present": "Present"
+    },
+    "portfolio": {
+      "all": "All",
+      "filters": "Filter projects by category"
+    },
+    "contact": {
+      "location": "Location",
+      "email": "Email",
+      "social": "Social media"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "designedBy": "Designed by"
+    },
+    "a11y": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "mainMenu": "Main menu",
+      "backToTop": "Back to top",
+      "language": "Language"
+    }
+  },
+  "hero": {
+    "name": "Edier Andrés Villaneda Navarro",
+    "role": "Senior Software Developer",
+    "social": [
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ediervillaneda/"
+      },
+      { "icon": "github", "label": "GitHub", "url": "https://github.com/ediervillaneda" },
+      { "icon": "facebook", "label": "Facebook", "url": "https://www.facebook.com/ediervillaneda" },
+      {
+        "icon": "instagram",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/ediervillaneda/"
+      },
+      { "icon": "x-twitter", "label": "X (Twitter)", "url": "https://twitter.com/EdierVillaneda" }
+    ]
+  },
+  "about": {
+    "description": "Systems Engineer with more than 15 years of experience in software development for the financial, healthcare and corporate sectors. Expert in IBMi (RPG ILE, COBOL/400), PHP, Node.js and Angular. Passionate about integrating legacy systems with modern technologies, process automation and software quality.",
+    "title": "Senior Software Developer | Software Analyst Developer | IT Roles",
+    "summary": "Senior Software Developer with a long track record in the analysis, development and maintenance of enterprise solutions.",
+    "details": "Experienced across multiple technology stacks, from IBMi mainframe to modern frontend. UiPath-certified RPA developer with knowledge of Docker, Jenkins and DevOps practices. Focused on delivering robust, scalable, high-value solutions for the business.",
+    "website": "https://ediervillaneda.github.io/",
+    "city": "El Cerrito",
+    "country": "Colombia",
+    "degree": "Systems Engineer",
+    "email": "ediervillaneda@gmail.com",
+    "freelance": "Available",
+    "image": "assets/img/profile-img.jpg"
+  },
+  "facts": {
+    "description": "More than 18 years of continuous experience in software development, systems integration and process automation.",
+    "items": [
+      { "icon": "calendar-days", "value": "18+", "label": "Years of experience" },
+      { "icon": "building", "value": "6", "label": "Companies" },
+      { "icon": "diagram-project", "value": "12+", "label": "Projects delivered" },
+      { "icon": "certificate", "value": "5+", "label": "Certifications" }
+    ]
+  },
+  "skills": {
+    "description": "More than 15 years of software development experience across multiple platforms and languages.",
+    "items": [
+      { "name": "IBM i / RPG ILE / COBOL", "level": 95 },
+      { "name": "PHP / Symfony / Laravel", "level": 90 },
+      { "name": "JavaScript / TypeScript / Angular", "level": 85 },
+      { "name": "Node.js", "level": 80 },
+      { "name": "Oracle PL/SQL", "level": 90 },
+      { "name": "Git / Azure DevOps / CI/CD", "level": 85 },
+      { "name": "Docker / Jenkins / Kubernetes", "level": 60 },
+      { "name": "Vue.js / React", "level": 50 },
+      { "name": "UiPath RPA", "level": 75 },
+      { "name": "C# / .NET", "level": 65 }
+    ]
+  },
+  "resume": {
+    "description": "Systems Engineer with more than 15 years of experience in software development for the financial, healthcare and corporate sectors. Expert in IBMi, PHP, Node.js and Angular.",
+    "education": [
+      {
+        "title": "Systems Engineering degree",
+        "date": "2007",
+        "institution": "Fundación Universitaria San Martín",
+        "place": "Palmira, Valle, Colombia"
+      },
+      {
+        "title": "Technical High School Diploma (Electricity)",
+        "date": "1999",
+        "institution": "Instituto Técnico Industrial Providencia",
+        "place": "El Cerrito, Valle, Colombia"
+      }
+    ],
+    "courses": [
+      {
+        "title": "RPA Developer Foundation",
+        "date": "June 2020",
+        "institution": "UiPath Academy",
+        "place": "Online"
+      },
+      {
+        "title": "Node.js: From zero to expert",
+        "date": "February 2020",
+        "institution": "Udemy",
+        "place": "Online"
+      },
+      {
+        "title": "Angular 9, Laravel 5, RxJS",
+        "date": "2020 - 2022",
+        "institution": "Udemy",
+        "place": "Online"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Senior Software Developer",
+        "start": "January 2019",
+        "end": null,
+        "company": "PersonalSoft S.A.S.",
+        "city": "Medellín, Antioquia",
+        "highlights": [
+          "Development and maintenance of enterprise IBMi / RPG ILE solutions for Leasing Bancolombia (Oct. 2022 - present), delivering improvements and resolving incidents in the leasing system's processes and data.",
+          "Development of requirements on the Matrix hospital management platform at Clínica de las Américas using PHP and Node.js (Jan. 2021 - Oct. 2022).",
+          "End-to-end certification of the Pactia platform on Azure DevOps, ensuring the quality and functional compliance of the corporate portal (Aug. 2021 - Jan. 2022).",
+          "Development of a pilot application and analysis of User Story documentation at Intersoftware with PHP (Jun. 2020 - Aug. 2021).",
+          "Development of the Managers Portal and migration of the OP platform from 4.0 to 4.2 at Votre / Leonisa using IBMi / RPG ILE (Jun. 2019 - Apr. 2020)."
+        ]
+      },
+      {
+        "position": "Maintenance and Support Unit Developer",
+        "start": "April 2015",
+        "end": "January 2019",
+        "company": "Certadata S.A.S.",
+        "city": "Santiago de Cali, Valle",
+        "highlights": [
+          "Management and development of COBOL/400 and COBOL ILE projects on AS/400 iSeries for the financial sector.",
+          "Integration with Visionamos through Web Services (AS/400 ↔ external server).",
+          "Development with SDA, RLU and PDM, and RPG ILE support.",
+          "Development and maintenance of Windows Services in C#."
+        ]
+      },
+      {
+        "position": "IT Analyst",
+        "start": "November 2012",
+        "end": "April 2014",
+        "company": "Premize S.A.S.",
+        "city": "Santiago de Cali, Valle",
+        "highlights": [
+          "Full lifecycle of PHP + Oracle projects: analysis, estimation, development and deployment.",
+          "Optimization of high-volume queries and reports with Oracle PL/SQL.",
+          "Implementation of Web Services, Symfony, AJAX and Git/SVN version control.",
+          "Automation with Excel macros and data mining."
+        ]
+      },
+      {
+        "position": "Outsourced Development Analyst",
+        "start": "August 2012",
+        "end": "November 2012",
+        "company": "Intergrupo S.A.",
+        "city": "Santiago de Cali, Valle",
+        "highlights": [
+          "Third-Party Payer Recovery project in PHP Symfony 2 + Oracle for the healthcare sector.",
+          "Web Services development and Oracle PL/SQL optimization."
+        ]
+      },
+      {
+        "position": "National Technology Analyst",
+        "start": "March 2011",
+        "end": "March 2012",
+        "company": "Coomeva EPS",
+        "city": "Santiago de Cali, Valle",
+        "highlights": [
+          "Development of PHP + Oracle web applications for the EPS's critical nationwide processes.",
+          "Implementation of Web Services, PL/SQL and JavaScript frameworks.",
+          "Process automation and query optimization."
+        ]
+      },
+      {
+        "position": "Analyst Developer",
+        "start": "June 2008",
+        "end": "March 2010",
+        "company": "Felinux Ltda",
+        "city": "Santiago de Cali, Valle",
+        "highlights": [
+          "Web migration and development with PHP, JavaScript, jQuery, HTML and CSS.",
+          "Development of the PANCE platform.",
+          "Administration of MySQL and Linux servers."
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "description": "Projects developed for the financial, healthcare and corporate sectors, spanning multiple technologies and platforms.",
+    "categories": [
+      { "id": "mainframe", "label": "Mainframe" },
+      { "id": "financial", "label": "Financial" },
+      { "id": "web", "label": "Web" }
+    ],
+    "items": [
+      {
+        "title": "Leasing Bancolombia",
+        "category": "mainframe",
+        "subtype": "IBMi",
+        "description": "Financial leasing management system on the IBMi platform for one of Colombia's largest banks.",
+        "technologies": [
+          { "name": "IBMi", "color": "#4a5568", "textColor": "#e2e8f0" },
+          { "name": "RPG ILE", "color": "#718096", "textColor": "#e2e8f0" },
+          { "name": "COBOL", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Clínica de las Américas",
+        "category": "web",
+        "subtype": "Healthcare",
+        "description": "Appointment and medical records management platform for a high-complexity clinic in Medellín.",
+        "technologies": [
+          { "name": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+          { "name": "Node.js", "color": "#4a7c59", "textColor": "#d8f0e0" },
+          { "name": "MySQL", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Pactia Corporate Portal",
+        "category": "financial",
+        "subtype": "DevOps",
+        "description": "Corporate portal for real estate asset management integrated with CI/CD pipelines on Azure.",
+        "technologies": [
+          { "name": "Azure DevOps", "color": "#4a8fa8", "textColor": "#daf0f8" },
+          { "name": "Angular", "color": "#3a6186", "textColor": "#dce8f5" },
+          { "name": ".NET", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Votre / Leonisa",
+        "category": "mainframe",
+        "subtype": "IBMi",
+        "description": "Production, inventory and distribution modules on AS/400 for a leading Latin American fashion company.",
+        "technologies": [
+          { "name": "IBMi", "color": "#4a5568", "textColor": "#e2e8f0" },
+          { "name": "RPG ILE", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Intersoftware Biosafety",
+        "category": "web",
+        "subtype": "Healthcare",
+        "description": "Biosafety control and sanitary protocol tracking system for healthcare institutions.",
+        "technologies": [
+          { "name": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+          { "name": "jQuery", "color": "#9a7c2e", "textColor": "#fef3c7" },
+          { "name": "MySQL", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Certadata AS/400",
+        "category": "financial",
+        "subtype": "AS/400",
+        "description": "Development and maintenance of financial and accounting modules on the AS/400 platform for the banking sector.",
+        "technologies": [
+          { "name": "COBOL/400", "color": "#4a5568", "textColor": "#e2e8f0" },
+          { "name": "IBMi", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Premize PHP + Oracle",
+        "category": "web",
+        "subtype": "Corporate",
+        "description": "Incentive and commission management platform for sales teams with an Oracle backend and PHP Symfony.",
+        "technologies": [
+          { "name": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+          { "name": "Oracle", "color": "#8b3a3a", "textColor": "#fde8e8" },
+          { "name": "Symfony", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Coomeva EPS",
+        "category": "financial",
+        "subtype": "Healthcare",
+        "description": "Medical procedure authorization and member management system for a healthcare cooperative.",
+        "technologies": [
+          { "name": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+          { "name": "Oracle", "color": "#8b3a3a", "textColor": "#fde8e8" },
+          { "name": "Laravel", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      },
+      {
+        "title": "Felinux PANCE Platform",
+        "category": "web",
+        "subtype": "Education",
+        "description": "Assessment and preparation platform for the PANCE exam for veterinary medicine graduates.",
+        "technologies": [
+          { "name": "PHP", "color": "#3a6186", "textColor": "#dce8f5" },
+          { "name": "jQuery", "color": "#9a7c2e", "textColor": "#fef3c7" },
+          { "name": "MySQL", "color": "#718096", "textColor": "#e2e8f0" }
+        ]
+      }
+    ]
+  },
+  "services": {
+    "description": "More than 15 years of software development experience delivering end-to-end technology solutions for companies across many industries.",
+    "items": [
+      {
+        "icon": "code",
+        "color": "blue",
+        "title": "IBM i (AS/400) Development",
+        "description": "Specialist in RPG ILE, COBOL/400, COBOL ILE, SQL/400 and enterprise solutions on IBMi systems for the financial sector."
+      },
+      {
+        "icon": "globe",
+        "color": "orange",
+        "title": "Full Stack Web Development",
+        "description": "Modern web applications with PHP, Symfony, Laravel, Node.js, Angular and Vue.js. Integration of REST/SOAP services and Oracle, MySQL and PostgreSQL databases."
+      },
+      {
+        "icon": "right-left",
+        "color": "pink",
+        "title": "Systems Integration",
+        "description": "Integration of legacy systems (AS/400, IBMi) with modern platforms through Web Services, middleware and REST/SOAP APIs."
+      },
+      {
+        "icon": "robot",
+        "color": "yellow",
+        "title": "RPA Automation",
+        "description": "Business process automation with UiPath Studio. Streamlining repetitive workflows and reducing operating costs."
+      },
+      {
+        "icon": "chart-line",
+        "color": "red",
+        "title": "Database Optimization",
+        "description": "Query optimization for Oracle PL/SQL, SQL Server, MySQL and DB2. Efficient schema design and high-volume reporting."
+      },
+      {
+        "icon": "shield-halved",
+        "color": "teal",
+        "title": "DevOps & CI/CD",
+        "description": "CI/CD pipelines with Azure DevOps and Jenkins. Containerization with Docker and orchestration with Kubernetes."
+      }
+    ]
+  },
+  "references": {
+    "description": "Professional references that back my career.",
+    "items": [
+      {
+        "name": "Clara Inés Peñaloza Afanador",
+        "position": "Industrial Engineer",
+        "company": "Taylor & Johnson",
+        "testimonial": "Edier is a highly competent and committed professional. His ability to solve complex problems and his experience with many technologies make him a valuable asset to any development team."
+      },
+      {
+        "name": "Nathalia Andrea Mejía",
+        "position": "Attorney",
+        "company": "MB Legal Partners",
+        "testimonial": "I have had the opportunity to know Edier's work for several years. I highlight his discipline, honesty and excellent interpersonal skills. A professional who truly commits to his projects."
+      },
+      {
+        "name": "María Alejandra Serrano",
+        "position": "Civil Engineer",
+        "company": "Sika Colombia S.A.S.",
+        "testimonial": "Edier shows a high level of professionalism and dedication in every project he takes on. His ability to adapt to different technologies and work environments is truly admirable. Highly recommended."
+      }
+    ]
+  },
+  "contact": {
+    "description": "You can reach me through the following channels. I am available for job opportunities and projects.",
+    "location": "El Cerrito, Valle del Cauca, Colombia",
+    "email": "ediervillaneda@gmail.com"
+  }
+}
