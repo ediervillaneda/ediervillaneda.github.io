@@ -52,7 +52,7 @@ describe('page sections', () => {
       fixture.nativeElement.querySelectorAll('h5') as NodeListOf<HTMLElement>,
     );
 
-    expect(dates.some((h5) => h5.textContent?.includes('January 2019 - Present'))).toBeTrue();
+    expect(dates.some((h5) => h5.textContent?.includes('January 2019 - Present'))).toBe(true);
   });
 
   it('Skills splits the items into two balanced columns', async () => {

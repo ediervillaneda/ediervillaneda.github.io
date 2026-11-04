@@ -34,7 +34,7 @@ describe('ContentService', () => {
 
     expect(service.language()).toBe('en');
     expect(service.content()).toEqual(CONTENT.en);
-    expect(service.loaded()).toBeTrue();
+    expect(service.loaded()).toBe(true);
   });
 
   it('switches language, updates <html lang> and remembers the choice', async () => {
@@ -79,6 +79,6 @@ describe('ContentService', () => {
     await TestBed.inject(ApplicationRef).whenStable();
 
     expect(service.error()).toBeTruthy();
-    expect(service.loaded()).toBeFalse();
+    expect(service.loaded()).toBe(false);
   });
 });

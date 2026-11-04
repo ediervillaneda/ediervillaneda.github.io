@@ -39,9 +39,10 @@ describe('firebase-data content', () => {
         ...site.hero.social.map((link): [IconPrefix, string] => ['fab', link.icon]),
       ];
       for (const [prefix, name] of icons) {
-        expect(library.getIconDefinition(prefix, name as IconName))
-          .withContext(`${prefix} ${name}`)
-          .not.toBeNull();
+        expect(
+          library.getIconDefinition(prefix, name as IconName),
+          `${prefix} ${name}`,
+        ).not.toBeNull();
       }
     }
   });
