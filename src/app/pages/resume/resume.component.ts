@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ResumeService } from 'src/app/services/resume.service';
+import { Component, inject } from '@angular/core';
+
+import { ContentService } from '../../content/content.service';
 
 @Component({
-  standalone: true,
   selector: 'app-resume',
   templateUrl: './resume.component.html',
-  imports: [CommonModule],
 })
-export class ResumeComponent implements OnInit {
-  constructor(public _resume: ResumeService) {}
-
-  ngOnInit(): void {}
+export class ResumeComponent {
+  protected readonly content = inject(ContentService);
 }

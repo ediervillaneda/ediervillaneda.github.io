@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { ReferencesService } from '../../services/references.service';
+import { Component, inject } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+
+import { ContentService } from '../../content/content.service';
 
 @Component({
-  standalone: true,
   selector: 'app-references',
   templateUrl: './references.component.html',
-  imports: [],
+  imports: [FaIconComponent],
 })
 export class ReferencesComponent {
-  constructor(public _references: ReferencesService) {}
+  protected readonly content = inject(ContentService);
 }

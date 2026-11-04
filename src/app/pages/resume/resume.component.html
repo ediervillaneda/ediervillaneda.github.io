@@ -1,53 +1,56 @@
-<!-- ======= Resume Section ======= -->
-<section id="resume" class="resume">
-  <div class="container" data-aos="fade-up">
+@if (content.content(); as site) {
+  @let resume = site.resume;
+  @let labels = site.ui.resume;
+  <section id="resume" class="resume">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>{{ site.ui.sections.resume }}</h2>
+        <p>{{ resume.description }}</p>
+      </div>
 
-    <div class="section-title">
-      <h2>Resume</h2>
-      <p>{{ _resume.resume.descripcion }}</p>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <h3 class="resume-title">Education</h3>
-        <span *ngFor="let item of _resume.resume.educations">
-          <span *ngIf="item.title !== ''; then education"></span>
-          <ng-template #education>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="resume-title">{{ labels.education }}</h3>
+          @for (item of resume.education; track item.title) {
             <div class="resume-item">
               <h4>{{ item.title }}</h4>
               <h5>{{ item.date }}</h5>
-              <p><em>{{ item.institute }} ({{item.site}})</em></p>
+              <p>
+                <em>{{ item.institution }} ({{ item.place }})</em>
+              </p>
             </div>
-          </ng-template>
-        </span>
+          }
 
-        <h3 class="resume-title">Courses</h3>
-        <span *ngFor="let item2 of _resume.resume.educations">
-          <span *ngIf="item2.title == ''">
+          <h3 class="resume-title">{{ labels.courses }}</h3>
+          @for (item of resume.courses; track item.title) {
             <div class="resume-item">
-              <h4>{{ item2.course }}</h4>
-              <h5>{{ item2.date }}</h5>
-              <p><em>{{ item2.institute }} ({{ item2.site }})</em></p>
+              <h4>{{ item.title }}</h4>
+              <h5>{{ item.date }}</h5>
+              <p>
+                <em>{{ item.institution }} ({{ item.place }})</em>
+              </p>
             </div>
-          </span>
-        </span>
-      </div>
+          }
+        </div>
 
-      <div class="col-lg-6">
-        <h3 class="resume-title">Professional Experience</h3>
-        <span *ngFor="let item3 of _resume.resume.experiences; let i = index">
-          <div class="resume-item">
-            <h4>{{ item3.position }}</h4>
-            <h5>{{ item3.start_date }} - {{ item3.end_date === false ? 'Actualidad': item3.end_date }}</h5>
-            <p><em>{{ item3.company }}, {{ item3.city }} </em></p>
-            <ul>
-              <li *ngFor="let ex of item3.description">{{ ex }}</li>
-            </ul>
-          </div>
-        </span>
-
+        <div class="col-lg-6">
+          <h3 class="resume-title">{{ labels.experience }}</h3>
+          @for (job of resume.experience; track job.company + job.start) {
+            <div class="resume-item">
+              <h4>{{ job.position }}</h4>
+              <h5>{{ job.start }} - {{ job.end ?? labels.present }}</h5>
+              <p>
+                <em>{{ job.company }}, {{ job.city }}</em>
+              </p>
+              <ul>
+                @for (highlight of job.highlights; track $index) {
+                  <li>{{ highlight }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
       </div>
     </div>
-
-  </div>
-</section><!-- End Resume Section -->
+  </section>
+}

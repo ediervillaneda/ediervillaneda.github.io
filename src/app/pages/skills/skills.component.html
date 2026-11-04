@@ -1,34 +1,33 @@
-<!-- ======= Skills Section ======= -->
-<section id="skills" class="skills section-bg">
-  <div class="container" data-aos="fade-up">
-
-    <div class="section-title">
-      <h2>Skills</h2>
-      <p>{{_about.about.skills?.descripcion}}</p>
-    </div>
-
-    <div class="row skills-content">
-      <div class="col-lg-6">
-        <div class="progress" *ngFor="let item of _about.about.skills?.skill | slice:0:5">
-          <span class="skill">{{ item.skill }}<em class="val">{{ item.porcentaje }}</em></span>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-              [attr.aria-label]="item.skill" [style.width]="item.porcentaje"
-              [attr.aria-valuenow]="item.porcentaje" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
+@if (content.content(); as site) {
+  <section id="skills" class="skills section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>{{ site.ui.sections.skills }}</h2>
+        <p>{{ site.skills.description }}</p>
       </div>
-      <div class="col-lg-6">
-        <div class="progress" *ngFor="let item of _about.about.skills?.skill | slice:5:10">
-          <span class="skill">{{ item.skill }}<em class="val">{{ item.porcentaje }}</em></span>
-          <div class="progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-              [attr.aria-label]="item.skill" [style.width]="item.porcentaje"
-              [attr.aria-valuenow]="item.porcentaje" aria-valuemin="0" aria-valuemax="100"></div>
+
+      <div class="row skills-content" appInView #skills="inView">
+        @for (column of columns(); track $index) {
+          <div class="col-lg-6">
+            @for (skill of column; track skill.name) {
+              <div class="progress">
+                <span class="skill">{{ skill.name }} <em class="val">{{ skill.level }}%</em></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    [attr.aria-label]="skill.name"
+                    [attr.aria-valuenow]="skill.level"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    [style.width.%]="skills.visible() ? skill.level : 0"
+                  ></div>
+                </div>
+              </div>
+            }
           </div>
-        </div>
+        }
       </div>
     </div>
-
-  </div>
-</section><!-- End Skills Section -->
+  </section>
+}

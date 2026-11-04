@@ -1,24 +1,22 @@
-<!-- ======= Facts Section ======= -->
-<section id="facts" class="facts">
-  <div class="container" data-aos="fade-up">
-
-    <div class="section-title">
-      <h2>Facts</h2>
-      <p>{{ _facts.facts.descripcion }}</p>
-    </div>
-
-    <div class="row">
-
-      <div class="col-6 col-sm-3" *ngFor="let item of _facts.facts.fact">
-        <div class="count-box">
-          <!-- Condicional para mostrar el icono solo si existe -->
-          <fa-icon *ngIf="item.icono" [icon]="['fas', item.icono]"></fa-icon>
-          <span data-toggle="counter-up">{{ item.cantidad }}</span>
-          <p>{{ item.descripcion }}</p>
-        </div>
+@if (content.content(); as site) {
+  <section id="facts" class="facts">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>{{ site.ui.sections.facts }}</h2>
+        <p>{{ site.facts.description }}</p>
       </div>
 
+      <div class="row">
+        @for (fact of site.facts.items; track fact.icon) {
+          <div class="col-6 col-sm-3">
+            <div class="count-box">
+              <fa-icon [icon]="icon(fact.icon)" aria-hidden="true" />
+              <app-count-up [value]="fact.value" />
+              <p>{{ fact.label }}</p>
+            </div>
+          </div>
+        }
+      </div>
     </div>
-
-  </div>
-</section><!-- End Facts Section -->
+  </section>
+}

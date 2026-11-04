@@ -1,70 +1,44 @@
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-  <div class="container" data-aos="fade-up">
+@if (content.content(); as site) {
+  @let contact = site.contact;
+  @let labels = site.ui.contact;
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>{{ site.ui.sections.contact }}</h2>
+        <p>{{ contact.description }}</p>
+      </div>
 
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>Puedes contactarme a través de los siguientes medios. Estoy disponible para oportunidades laborales y proyectos.</p>
-    </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <address class="info mb-0">
+            <div class="address">
+              <fa-icon icon="location-dot" aria-hidden="true" />
+              <h3 class="h4">{{ labels.location }}</h3>
+              <p>{{ contact.location }}</p>
+            </div>
 
-    <div class="row mt-1">
+            <div class="email">
+              <fa-icon icon="envelope" aria-hidden="true" />
+              <h3 class="h4">{{ labels.email }}</h3>
+              <p>
+                <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+              </p>
+            </div>
 
-      <div class="col-lg-4">
-        <div class="info">
-          <div class="address">
-            <em class="icofont-google-map"></em>
-            <h4>Ubicación:</h4>
-            <p>El Cerrito, Valle Del Cauca, Colombia</p>
-          </div>
-
-          <div class="email">
-            <em class="icofont-envelope"></em>
-            <h4>Email:</h4>
-            <p>ediervillaneda&#64;gmail.com</p>
-          </div>
-
-          <div class="phone">
-            <em class="icofont-phone"></em>
-            <h4>Teléfono:</h4>
-            <p>(+57) 319-248-6175</p>
-          </div>
-
+            <div class="social">
+              <fa-icon icon="comments" aria-hidden="true" />
+              <h3 class="h4">{{ labels.social }}</h3>
+              <div class="social-l">
+                @for (link of site.hero.social; track link.url) {
+                  <a [href]="link.url" target="_blank" rel="noopener" [attr.aria-label]="link.label">
+                    <fa-icon [icon]="['fab', link.icon]" aria-hidden="true" />
+                  </a>
+                }
+              </div>
+            </div>
+          </address>
         </div>
-
       </div>
-
-      <div class="col-lg-8 mt-5 mt-lg-0">
-
-        <form action="mailto:ediervillaneda@gmail.com" method="post" role="form" class="php-email-form">
-          <div class="form-row">
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Por favor ingresa al menos 4 caracteres" />
-              <div class="validate"></div>
-            </div>
-            <div class="col-md-6 form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Por favor ingresa un email válido" />
-              <div class="validate"></div>
-            </div>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor ingresa al menos 8 caracteres" />
-            <div class="validate"></div>
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escribe un mensaje" placeholder="Mensaje"></textarea>
-            <div class="validate"></div>
-          </div>
-          <div class="mb-3">
-            <div class="loading">Enviando...</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Tu mensaje ha sido enviado. Gracias!</div>
-          </div>
-          <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-        </form>
-
-      </div>
-
     </div>
-
-  </div>
-</section><!-- End Contact Section -->
+  </section>
+}

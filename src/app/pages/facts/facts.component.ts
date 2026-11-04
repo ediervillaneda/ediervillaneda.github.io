@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { FactsService } from '../../services/facts.service';
+import { Component, inject } from '@angular/core';
+import { FaIconComponent } from '@fortawesome/angular-fontawesome';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
+
+import { ContentService } from '../../content/content.service';
+import { CountUp } from '../../share/count-up';
 
 @Component({
-  standalone: true,
   selector: 'app-facts',
   templateUrl: './facts.component.html',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [FaIconComponent, CountUp],
 })
 export class FactsComponent {
-  constructor(public _facts: FactsService, public library: FaIconLibrary) {
-    library.addIconPacks(fas, far);
+  protected readonly content = inject(ContentService);
+
+  /** Icon names come from the JSON content; they must be registered in `icons.ts`. */
+  protected icon(name: string): IconName {
+    return name as IconName;
   }
 }

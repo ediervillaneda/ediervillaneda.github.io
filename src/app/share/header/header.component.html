@@ -1,19 +1,44 @@
+@if (content.ui(); as ui) {
+  <button
+    type="button"
+    class="mobile-nav-toggle"
+    aria-controls="header"
+    [attr.aria-expanded]="menuOpen()"
+    [attr.aria-label]="menuOpen() ? ui.a11y.closeMenu : ui.a11y.openMenu"
+    (click)="toggleMenu()"
+  >
+    <fa-icon [icon]="menuOpen() ? 'xmark' : 'bars'" aria-hidden="true" />
+  </button>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><em class="icofont-navigation-menu"></em></button>
-
-  <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav class="nav-menu">
+    <nav class="nav-menu" [attr.aria-label]="ui.a11y.mainMenu">
       <ul>
-        <li class="active"><a href="#hero"><em class="bx bx-home"></em> <span>Home</span></a></li>
-        <li><a href="#about"><em class="bx bx-user"></em> <span>About</span></a></li>
-        <li><a href="#resume"><em class="bx bx-file-blank"></em> <span>Resume</span></a></li>
-        <li><a href="#portfolio"><em class="bx bx-book-content"></em> <span>Portfolio</span></a></li>
-        <!-- <li><a href="#services"><em class="bx bx-server"></em> <span>Services</span></a></li> -->
-        <li><a href="#contact"><em class="bx bx-envelope"></em> <span>Contact</span></a></li>
+        @for (item of items; track item.id) {
+          <li [class.active]="active() === item.target">
+            <a
+              [href]="'#' + item.target"
+              [attr.aria-current]="active() === item.target ? 'true' : null"
+              (click)="select(item.target)"
+            >
+              <fa-icon [icon]="item.icon" aria-hidden="true" />
+              <span>{{ ui.nav[item.id] }}</span>
+            </a>
+          </li>
+        }
       </ul>
-    </nav><!-- .nav-menu -->
+    </nav>
 
-  </header><!-- End Header -->
+    <div class="language-switch" role="group" [attr.aria-label]="ui.a11y.language">
+      @for (language of languages; track language) {
+        <button
+          type="button"
+          [attr.lang]="language"
+          [attr.aria-pressed]="content.language() === language"
+          (click)="setLanguage(language)"
+        >
+          {{ language.toUpperCase() }}
+        </button>
+      }
+    </div>
+  </header>
+}

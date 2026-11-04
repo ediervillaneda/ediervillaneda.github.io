@@ -1,32 +1,36 @@
-<section id="references" class="references section-bg">
-  <div class="container" data-aos="fade-up">
+@if (content.content(); as site) {
+  <section id="references" class="references section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>{{ site.ui.sections.references }}</h2>
+        <p>{{ site.references.description }}</p>
+      </div>
 
-    <div class="section-title">
-      <h2>Referencias</h2>
-      <p>{{ _references.references.descripcion }}</p>
-    </div>
-
-    <div class="row">
-
-      @for (ref of _references.references.referencias; track ref.nombre; let i = $index) {
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch"
-             data-aos="zoom-in"
-             [attr.data-aos-delay]="(i + 1) * 100">
-          <div class="card">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">{{ ref.nombre }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{{ ref.cargo }} &mdash; {{ ref.empresa }}</h6>
-              <p class="card-text flex-grow-1">
-                <em class="bx bxs-quote-alt-left quote-icon-left"></em>
-                {{ ref.testimonio }}
-                <em class="bx bxs-quote-alt-right quote-icon-right"></em>
-              </p>
-            </div>
+      <div class="row gy-4">
+        @for (reference of site.references.items; track reference.name; let i = $index) {
+          <div
+            class="col-lg-4 col-md-6 d-flex align-items-stretch"
+            data-aos="zoom-in"
+            [attr.data-aos-delay]="(i + 1) * 100"
+          >
+            <figure class="card w-100 mb-0">
+              <div class="card-body d-flex flex-column">
+                <figcaption>
+                  <h3 class="card-title">{{ reference.name }}</h3>
+                  <p class="card-subtitle mb-2 text-muted">
+                    {{ reference.position }} &mdash; {{ reference.company }}
+                  </p>
+                </figcaption>
+                <blockquote class="card-text flex-grow-1 mb-0">
+                  <fa-icon icon="quote-left" class="quote-icon-left" aria-hidden="true" />
+                  {{ reference.testimonial }}
+                  <fa-icon icon="quote-right" class="quote-icon-right" aria-hidden="true" />
+                </blockquote>
+              </div>
+            </figure>
           </div>
-        </div>
-      }
-
+        }
+      </div>
     </div>
-
-  </div>
-</section>
+  </section>
+}
