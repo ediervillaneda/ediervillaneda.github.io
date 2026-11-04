@@ -27,3 +27,5 @@ There is no lint script configured.
 Two GitHub Actions workflows run on push to `master`:
 - `.github/workflows/firebase-hosting-merge.yml` — builds and deploys to Firebase Hosting (project `ediervillaneda-a5ab2`; `firebase.json` serves `dist/browser` with SPA rewrites).
 - `.github/workflows/deploy-gh-pages.yml` — builds with `--base-href /` and deploys `dist/browser` to GitHub Pages.
+
+Cloudflare Workers Builds is also connected to the repo (configured in the Cloudflare dashboard, not in a workflow). `wrangler.jsonc` serves `dist/browser` as static assets with SPA fallback; validate locally with `npm run build && npx wrangler deploy --dry-run`.
