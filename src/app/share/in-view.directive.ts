@@ -1,4 +1,12 @@
-import { DestroyRef, Directive, ElementRef, afterNextRender, inject, input, signal } from '@angular/core';
+import {
+  DestroyRef,
+  Directive,
+  ElementRef,
+  afterNextRender,
+  inject,
+  input,
+  signal,
+} from '@angular/core';
 
 /**
  * Exposes `visible()`, which turns true (once) when the host scrolls into view.

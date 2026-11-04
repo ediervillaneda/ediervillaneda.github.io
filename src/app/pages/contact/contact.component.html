@@ -30,7 +30,12 @@
               <h3 class="h4">{{ labels.social }}</h3>
               <div class="social-l">
                 @for (link of site.hero.social; track link.url) {
-                  <a [href]="link.url" target="_blank" rel="noopener" [attr.aria-label]="link.label">
+                  <a
+                    [href]="link.url"
+                    target="_blank"
+                    rel="noopener"
+                    [attr.aria-label]="link.label"
+                  >
                     <fa-icon [icon]="['fab', link.icon]" aria-hidden="true" />
                   </a>
                 }

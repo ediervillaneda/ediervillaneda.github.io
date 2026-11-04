@@ -31,7 +31,9 @@ describe('HeaderComponent', () => {
 
   it('links to every section with translated labels', async () => {
     const fixture = await render();
-    const links: HTMLAnchorElement[] = Array.from(fixture.nativeElement.querySelectorAll('.nav-menu a'));
+    const links: HTMLAnchorElement[] = Array.from(
+      fixture.nativeElement.querySelectorAll('.nav-menu a'),
+    );
 
     expect(links.map((link) => link.getAttribute('href'))).toEqual(
       NAV_ITEMS.map((item) => `#${item.target}`),

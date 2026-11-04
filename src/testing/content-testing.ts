@@ -1,6 +1,10 @@
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-import { ApplicationRef, provideAppInitializer, provideZonelessChangeDetection } from '@angular/core';
+import {
+  ApplicationRef,
+  provideAppInitializer,
+  provideZonelessChangeDetection,
+} from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import en from '../../firebase-data/en.json';

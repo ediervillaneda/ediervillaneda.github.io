@@ -8,17 +8,17 @@ updates:
     groups:
       angular:
         patterns:
-          - "@angular/*"
-          - "@angular-devkit/*"
+          - '@angular/*'
+          - '@angular-devkit/*'
       security:
         applies-to: security-updates
         patterns:
-          - "*"
+          - '*'
     ignore:
-      - dependency-name: "@angular/*"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "@angular-devkit/*"
-        update-types: ["version-update:semver-major"]
+      - dependency-name: '@angular/*'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@angular-devkit/*'
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: github-actions
     directory: /

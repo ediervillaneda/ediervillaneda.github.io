@@ -48,7 +48,9 @@ describe('page sections', () => {
 
   it('Resume labels the current job with the translated "present" text', async () => {
     const fixture = await render(ResumeComponent, 'en');
-    const dates = Array.from(fixture.nativeElement.querySelectorAll('h5') as NodeListOf<HTMLElement>);
+    const dates = Array.from(
+      fixture.nativeElement.querySelectorAll('h5') as NodeListOf<HTMLElement>,
+    );
 
     expect(dates.some((h5) => h5.textContent?.includes('January 2019 - Present'))).toBeTrue();
   });

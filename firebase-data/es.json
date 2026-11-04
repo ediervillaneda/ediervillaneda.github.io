@@ -63,10 +63,18 @@
     "name": "Edier Andrés Villaneda Navarro",
     "role": "Senior Software Developer",
     "social": [
-      { "icon": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/ediervillaneda/" },
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ediervillaneda/"
+      },
       { "icon": "github", "label": "GitHub", "url": "https://github.com/ediervillaneda" },
       { "icon": "facebook", "label": "Facebook", "url": "https://www.facebook.com/ediervillaneda" },
-      { "icon": "instagram", "label": "Instagram", "url": "https://www.instagram.com/ediervillaneda/" },
+      {
+        "icon": "instagram",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/ediervillaneda/"
+      },
       { "icon": "x-twitter", "label": "X (Twitter)", "url": "https://twitter.com/EdierVillaneda" }
     ]
   },
@@ -110,13 +118,38 @@
   "resume": {
     "description": "Ingeniero de Sistemas con más de 15 años de experiencia en desarrollo de software en sectores financiero, salud y corporativo. Experto en IBMi, PHP, Node.js y Angular.",
     "education": [
-      { "title": "Ingeniero de Sistemas", "date": "2007", "institution": "Fundación Universitaria San Martín", "place": "Palmira, Valle, Colombia" },
-      { "title": "Bachiller Técnico (Electricidad)", "date": "1999", "institution": "Instituto Técnico Industrial Providencia", "place": "El Cerrito, Valle, Colombia" }
+      {
+        "title": "Ingeniero de Sistemas",
+        "date": "2007",
+        "institution": "Fundación Universitaria San Martín",
+        "place": "Palmira, Valle, Colombia"
+      },
+      {
+        "title": "Bachiller Técnico (Electricidad)",
+        "date": "1999",
+        "institution": "Instituto Técnico Industrial Providencia",
+        "place": "El Cerrito, Valle, Colombia"
+      }
     ],
     "courses": [
-      { "title": "RPA Developer Foundation", "date": "Junio 2020", "institution": "UiPath Academy", "place": "Online" },
-      { "title": "Node.js: De cero a experto", "date": "Febrero 2020", "institution": "Udemy", "place": "Online" },
-      { "title": "Angular 9, Laravel 5, RxJS", "date": "2020 - 2022", "institution": "Udemy", "place": "Online" }
+      {
+        "title": "RPA Developer Foundation",
+        "date": "Junio 2020",
+        "institution": "UiPath Academy",
+        "place": "Online"
+      },
+      {
+        "title": "Node.js: De cero a experto",
+        "date": "Febrero 2020",
+        "institution": "Udemy",
+        "place": "Online"
+      },
+      {
+        "title": "Angular 9, Laravel 5, RxJS",
+        "date": "2020 - 2022",
+        "institution": "Udemy",
+        "place": "Online"
+      }
     ],
     "experience": [
       {
@@ -306,12 +339,42 @@
   "services": {
     "description": "Más de 15 años de experiencia en desarrollo de software ofreciendo soluciones tecnológicas integrales para empresas de diversos sectores.",
     "items": [
-      { "icon": "code", "color": "blue", "title": "Desarrollos IBM i (AS/400)", "description": "Especialista en RPG ILE, COBOL/400, COBOL ILE, SQL/400 y desarrollo de soluciones corporativas sobre sistemas IBMi para el sector financiero." },
-      { "icon": "globe", "color": "orange", "title": "Desarrollo Web Full Stack", "description": "Aplicaciones web modernas con PHP, Symfony, Laravel, Node.js, Angular y Vue.js. Integración de servicios REST/SOAP y bases de datos Oracle, MySQL y PostgreSQL." },
-      { "icon": "right-left", "color": "pink", "title": "Integración de Sistemas", "description": "Integración de sistemas legacy (AS/400, IBMi) con plataformas modernas mediante Web Services, middleware y APIs REST/SOAP." },
-      { "icon": "robot", "color": "yellow", "title": "Automatización RPA", "description": "Automatización de procesos empresariales con UiPath Studio. Optimización de flujos de trabajo repetitivos y reducción de costos operativos." },
-      { "icon": "chart-line", "color": "red", "title": "Optimización de Bases de Datos", "description": "Optimización de consultas PL/SQL Oracle, SQL Server, MySQL y DB2. Diseño de esquemas eficientes y reportes de alto volumen." },
-      { "icon": "shield-halved", "color": "teal", "title": "DevOps & CI/CD", "description": "Implementación de pipelines CI/CD con Azure DevOps y Jenkins. Contenerización con Docker y orquestación con Kubernetes." }
+      {
+        "icon": "code",
+        "color": "blue",
+        "title": "Desarrollos IBM i (AS/400)",
+        "description": "Especialista en RPG ILE, COBOL/400, COBOL ILE, SQL/400 y desarrollo de soluciones corporativas sobre sistemas IBMi para el sector financiero."
+      },
+      {
+        "icon": "globe",
+        "color": "orange",
+        "title": "Desarrollo Web Full Stack",
+        "description": "Aplicaciones web modernas con PHP, Symfony, Laravel, Node.js, Angular y Vue.js. Integración de servicios REST/SOAP y bases de datos Oracle, MySQL y PostgreSQL."
+      },
+      {
+        "icon": "right-left",
+        "color": "pink",
+        "title": "Integración de Sistemas",
+        "description": "Integración de sistemas legacy (AS/400, IBMi) con plataformas modernas mediante Web Services, middleware y APIs REST/SOAP."
+      },
+      {
+        "icon": "robot",
+        "color": "yellow",
+        "title": "Automatización RPA",
+        "description": "Automatización de procesos empresariales con UiPath Studio. Optimización de flujos de trabajo repetitivos y reducción de costos operativos."
+      },
+      {
+        "icon": "chart-line",
+        "color": "red",
+        "title": "Optimización de Bases de Datos",
+        "description": "Optimización de consultas PL/SQL Oracle, SQL Server, MySQL y DB2. Diseño de esquemas eficientes y reportes de alto volumen."
+      },
+      {
+        "icon": "shield-halved",
+        "color": "teal",
+        "title": "DevOps & CI/CD",
+        "description": "Implementación de pipelines CI/CD con Azure DevOps y Jenkins. Contenerización con Docker y orquestación con Kubernetes."
+      }
     ]
   },
   "references": {

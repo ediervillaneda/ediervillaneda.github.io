@@ -26,6 +26,7 @@ There is no lint script configured.
 ## Deployment
 
 Two GitHub Actions workflows run on push to `master`:
+
 - `.github/workflows/firebase-hosting-merge.yml` — builds and deploys to Firebase Hosting (project `ediervillaneda-a5ab2`; `firebase.json` serves `dist/browser` with SPA rewrites).
 - `.github/workflows/deploy-gh-pages.yml` — builds with `--base-href /` and deploys `dist/browser` to GitHub Pages.
 

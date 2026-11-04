@@ -3,7 +3,11 @@ import { Component, DestroyRef, computed, effect, inject, input, signal } from '
 import { InViewDirective } from './in-view.directive';
 
 /** Splits `"18+"` into `{ target: 18, suffix: "+" }`; non-numeric values have no target. */
-export function parseCount(value: string): { target: number | null; prefix: string; suffix: string } {
+export function parseCount(value: string): {
+  target: number | null;
+  prefix: string;
+  suffix: string;
+} {
   const match = /^(\D*)(\d+)(.*)$/.exec(value);
   if (!match) return { target: null, prefix: '', suffix: value };
   return { prefix: match[1], target: Number(match[2]), suffix: match[3] };

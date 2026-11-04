@@ -19,14 +19,7 @@ export interface Meta {
 }
 
 export type SectionId =
-  | 'about'
-  | 'facts'
-  | 'skills'
-  | 'resume'
-  | 'portfolio'
-  | 'services'
-  | 'references'
-  | 'contact';
+  'about' | 'facts' | 'skills' | 'resume' | 'portfolio' | 'services' | 'references' | 'contact';
 
 export type NavId = 'home' | Exclude<SectionId, 'facts'>;
 

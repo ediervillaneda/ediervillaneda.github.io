@@ -63,10 +63,18 @@
     "name": "Edier Andrés Villaneda Navarro",
     "role": "Senior Software Developer",
     "social": [
-      { "icon": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/ediervillaneda/" },
+      {
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ediervillaneda/"
+      },
       { "icon": "github", "label": "GitHub", "url": "https://github.com/ediervillaneda" },
       { "icon": "facebook", "label": "Facebook", "url": "https://www.facebook.com/ediervillaneda" },
-      { "icon": "instagram", "label": "Instagram", "url": "https://www.instagram.com/ediervillaneda/" },
+      {
+        "icon": "instagram",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/ediervillaneda/"
+      },
       { "icon": "x-twitter", "label": "X (Twitter)", "url": "https://twitter.com/EdierVillaneda" }
     ]
   },
@@ -110,13 +118,38 @@
   "resume": {
     "description": "Systems Engineer with more than 15 years of experience in software development for the financial, healthcare and corporate sectors. Expert in IBMi, PHP, Node.js and Angular.",
     "education": [
-      { "title": "Systems Engineering degree", "date": "2007", "institution": "Fundación Universitaria San Martín", "place": "Palmira, Valle, Colombia" },
-      { "title": "Technical High School Diploma (Electricity)", "date": "1999", "institution": "Instituto Técnico Industrial Providencia", "place": "El Cerrito, Valle, Colombia" }
+      {
+        "title": "Systems Engineering degree",
+        "date": "2007",
+        "institution": "Fundación Universitaria San Martín",
+        "place": "Palmira, Valle, Colombia"
+      },
+      {
+        "title": "Technical High School Diploma (Electricity)",
+        "date": "1999",
+        "institution": "Instituto Técnico Industrial Providencia",
+        "place": "El Cerrito, Valle, Colombia"
+      }
     ],
     "courses": [
-      { "title": "RPA Developer Foundation", "date": "June 2020", "institution": "UiPath Academy", "place": "Online" },
-      { "title": "Node.js: From zero to expert", "date": "February 2020", "institution": "Udemy", "place": "Online" },
-      { "title": "Angular 9, Laravel 5, RxJS", "date": "2020 - 2022", "institution": "Udemy", "place": "Online" }
+      {
+        "title": "RPA Developer Foundation",
+        "date": "June 2020",
+        "institution": "UiPath Academy",
+        "place": "Online"
+      },
+      {
+        "title": "Node.js: From zero to expert",
+        "date": "February 2020",
+        "institution": "Udemy",
+        "place": "Online"
+      },
+      {
+        "title": "Angular 9, Laravel 5, RxJS",
+        "date": "2020 - 2022",
+        "institution": "Udemy",
+        "place": "Online"
+      }
     ],
     "experience": [
       {
@@ -306,12 +339,42 @@
   "services": {
     "description": "More than 15 years of software development experience delivering end-to-end technology solutions for companies across many industries.",
     "items": [
-      { "icon": "code", "color": "blue", "title": "IBM i (AS/400) Development", "description": "Specialist in RPG ILE, COBOL/400, COBOL ILE, SQL/400 and enterprise solutions on IBMi systems for the financial sector." },
-      { "icon": "globe", "color": "orange", "title": "Full Stack Web Development", "description": "Modern web applications with PHP, Symfony, Laravel, Node.js, Angular and Vue.js. Integration of REST/SOAP services and Oracle, MySQL and PostgreSQL databases." },
-      { "icon": "right-left", "color": "pink", "title": "Systems Integration", "description": "Integration of legacy systems (AS/400, IBMi) with modern platforms through Web Services, middleware and REST/SOAP APIs." },
-      { "icon": "robot", "color": "yellow", "title": "RPA Automation", "description": "Business process automation with UiPath Studio. Streamlining repetitive workflows and reducing operating costs." },
-      { "icon": "chart-line", "color": "red", "title": "Database Optimization", "description": "Query optimization for Oracle PL/SQL, SQL Server, MySQL and DB2. Efficient schema design and high-volume reporting." },
-      { "icon": "shield-halved", "color": "teal", "title": "DevOps & CI/CD", "description": "CI/CD pipelines with Azure DevOps and Jenkins. Containerization with Docker and orchestration with Kubernetes." }
+      {
+        "icon": "code",
+        "color": "blue",
+        "title": "IBM i (AS/400) Development",
+        "description": "Specialist in RPG ILE, COBOL/400, COBOL ILE, SQL/400 and enterprise solutions on IBMi systems for the financial sector."
+      },
+      {
+        "icon": "globe",
+        "color": "orange",
+        "title": "Full Stack Web Development",
+        "description": "Modern web applications with PHP, Symfony, Laravel, Node.js, Angular and Vue.js. Integration of REST/SOAP services and Oracle, MySQL and PostgreSQL databases."
+      },
+      {
+        "icon": "right-left",
+        "color": "pink",
+        "title": "Systems Integration",
+        "description": "Integration of legacy systems (AS/400, IBMi) with modern platforms through Web Services, middleware and REST/SOAP APIs."
+      },
+      {
+        "icon": "robot",
+        "color": "yellow",
+        "title": "RPA Automation",
+        "description": "Business process automation with UiPath Studio. Streamlining repetitive workflows and reducing operating costs."
+      },
+      {
+        "icon": "chart-line",
+        "color": "red",
+        "title": "Database Optimization",
+        "description": "Query optimization for Oracle PL/SQL, SQL Server, MySQL and DB2. Efficient schema design and high-volume reporting."
+      },
+      {
+        "icon": "shield-halved",
+        "color": "teal",
+        "title": "DevOps & CI/CD",
+        "description": "CI/CD pipelines with Azure DevOps and Jenkins. Containerization with Docker and orchestration with Kubernetes."
+      }
     ]
   },
   "references": {

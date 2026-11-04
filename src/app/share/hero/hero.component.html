@@ -2,7 +2,9 @@
   @if (content.content()?.hero; as hero) {
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>{{ hero.name }}</h1>
-      <p><span>{{ hero.role }}</span></p>
+      <p>
+        <span>{{ hero.role }}</span>
+      </p>
       <div class="social-l">
         @for (link of hero.social; track link.url) {
           <a [href]="link.url" target="_blank" rel="noopener" [attr.aria-label]="link.label">
